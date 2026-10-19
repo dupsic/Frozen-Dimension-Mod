@@ -3,13 +3,13 @@
 	"id": "frozen-dimention",
 	"version": "${version}",
 	"name": "Frozen dimention",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is frozen dimention!",
 	"authors": [
-		"Me!"
+		"Arturs Jelagins"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/dupsic"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/frozen-dimention/icon.png",
