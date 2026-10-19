@@ -1,3 +1,4 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimention/Tags for minecraft:block
-a69b6f4a4bc444146ed724ba8c442e54acb11f45 data/minecraft/tags/block/mineable/pickaxe.json
-a69b6f4a4bc444146ed724ba8c442e54acb11f45 data/minecraft/tags/block/needs_iron_tool.json
+0c10f7a4ef3a57419d8eb2e50137f7737957cf28 data/minecraft/tags/block/mineable/pickaxe.json
+c139e5a8b396841e5ef8233b04d6d2879db83cd0 data/minecraft/tags/block/mineable/shovel.json
+0c10f7a4ef3a57419d8eb2e50137f7737957cf28 data/minecraft/tags/block/needs_iron_tool.json

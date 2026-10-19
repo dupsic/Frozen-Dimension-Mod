@@ -19,15 +19,35 @@ public class ModBlocks {
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }
-    public static final Block DARK_BLUE_STONE = registerBlock("dark_blue_stone",
-            properties -> new Block(properties.strength(3f)
-                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
 
     public static final Block DARK_CRYONITE_ORE = registerBlock("dark_cryonite_ore",
             properties -> new Block(properties.strength(3f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final Block DARK_BLUE_STONE = registerBlock("dark_blue_stone",
+            properties -> new Block(properties.strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final Block LIGHT_BLUE_STONE = registerBlock("light_blue_stone",
+            properties -> new Block(properties.strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final Block RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block",
+            properties -> new Block(properties.strength(3f)
+                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F)));
+
+    public static final Block CRYONITE_BLOCK = registerBlock("cryonite_block",
+            properties -> new Block(properties.strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.METAL).strength(5.0F, 6.0F)));
+
+    public static final Block FROZEN_GRASS = registerBlock("frozen_grass",
+            properties -> new Block(properties.strength(1.5f)
+                    .sound(SoundType.GRASS)));
+
+    public static final Block FROZEN_DIRT = registerBlock("frozen_dirt",
+            properties -> new Block(properties.strength(1f)
+                    .sound(SoundType.GRAVEL)));
 
 
     // reģistrē jaunu bloku spēlē

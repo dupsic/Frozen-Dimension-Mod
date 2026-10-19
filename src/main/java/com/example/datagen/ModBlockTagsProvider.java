@@ -17,11 +17,24 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
     protected void addTags(HolderLookup.Provider registries) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE))
-                .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE));
+                .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE))
+                .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE))
+                .add(ModBlocks.getRK(ModBlocks.RAW_CRYONITE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.CRYONITE_BLOCK));
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE))
-                .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE));
+                .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE))
+                .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE))
+                .add(ModBlocks.getRK(ModBlocks.RAW_CRYONITE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.CRYONITE_BLOCK));
+
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_DIRT))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
+
+
+
 
     }
 }

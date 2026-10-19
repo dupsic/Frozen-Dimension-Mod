@@ -1,6 +1,9 @@
 {
   "values": [
     "frozen-dimention:dark_cryonite_ore",
-    "frozen-dimention:dark_blue_stone"
+    "frozen-dimention:dark_blue_stone",
+    "frozen-dimention:light_blue_stone",
+    "frozen-dimention:raw_cryonite_block",
+    "frozen-dimention:cryonite_block"
   ]
 }

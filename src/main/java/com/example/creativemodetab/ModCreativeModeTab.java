@@ -21,6 +21,11 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.RAW_CRYONITE);
                         output.accept(ModBlocks.DARK_BLUE_STONE);
                         output.accept(ModBlocks.DARK_CRYONITE_ORE);
+                        output.accept(ModBlocks.LIGHT_BLUE_STONE);
+                        output.accept(ModBlocks.CRYONITE_BLOCK);
+                        output.accept(ModBlocks.FROZEN_DIRT);
+                        output.accept(ModBlocks.FROZEN_GRASS);
+                        output.accept(ModBlocks.RAW_CRYONITE_BLOCK);
 
                     })
                     .build());
