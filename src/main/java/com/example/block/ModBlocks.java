@@ -16,6 +16,9 @@ import java.util.function.Function;
 
 public class ModBlocks {
 
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
     public static final Block DARK_BLUE_STONE = registerBlock("dark_blue_stone",
             properties -> new Block(properties.strength(3f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
