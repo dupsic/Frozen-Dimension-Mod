@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.creativemodetab.ModCreativeModeTab;
+import com.example.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -15,7 +17,8 @@ public class FrozenDimention implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
+		ModCreativeModeTab.registerModCreativeModeTabs();
 		LOGGER.info("Hello Fabric world!");
 	}
 
