@@ -1,6 +1,7 @@
 package com.example.creativemodetab;
 
 import com.example.FrozenDimention;
+import com.example.block.ModBlocks;
 import com.example.item.ModItems;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
@@ -18,6 +19,8 @@ public class ModCreativeModeTab {
                     .displayItems((parameters, output) -> {
 
                         output.accept(ModItems.RAW_CRYONITE);
+                        output.accept(ModBlocks.DARK_BLUE_STONE);
+                        output.accept(ModBlocks.DARK_CRYONITE_ORE);
 
                     })
                     .build());

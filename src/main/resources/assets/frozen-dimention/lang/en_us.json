@@ -2,5 +2,10 @@
   "creativemodetab.frozen_dimention.frozen_dimention": "Frozen Dimention",
 
 
-  "item.frozen-dimention.raw_cryonite": "Raw Cryonite"
+  "item.frozen-dimention.raw_cryonite": "Raw Cryonite",
+
+
+
+  "block.frozen-dimention.dark_blue_stone": "Dark Blue Stone",
+  "block.frozen-dimention.dark_cryonite_ore": "Dark Cryonite Ore"
 }

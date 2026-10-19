@@ -1,3 +1,9 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimention/Model Definitions
+73a442962e29c6f051f2abac21205bb820f295e3 assets/frozen-dimention/blockstates/dark_blue_stone.json
+071de25985fedd6aa00c6ea9e69ec106e3dd12f9 assets/frozen-dimention/blockstates/dark_cryonite_ore.json
+b255c0c3efcd920b3da86a9bd5da70a59c0f1dbd assets/frozen-dimention/items/dark_blue_stone.json
+fc5501afaa6cb97d06cb071ded64245217fc7c90 assets/frozen-dimention/items/dark_cryonite_ore.json
 34d00ed73b4067762babd74005fa36527f87fe47 assets/frozen-dimention/items/raw_cryonite.json
+f9cdf921ecc233436e233c01f98b30ee65c233a2 assets/frozen-dimention/models/block/dark_blue_stone.json
+85445adf36fb878087450fa7724acbc6d656baea assets/frozen-dimention/models/block/dark_cryonite_ore.json
 dc1cd2fe9dbdf39e9cd99fe4127c3549507a28cf assets/frozen-dimention/models/item/raw_cryonite.json

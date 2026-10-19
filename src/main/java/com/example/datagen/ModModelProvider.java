@@ -1,5 +1,6 @@
 package com.example.datagen;
 
+import com.example.block.ModBlocks;
 import com.example.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -15,7 +16,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-
+        blockModelGenerators.createTrivialCube(ModBlocks.DARK_BLUE_STONE);
+        blockModelGenerators.createTrivialCube(ModBlocks.DARK_CRYONITE_ORE);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.block.ModBlocks;
 import com.example.creativemodetab.ModCreativeModeTab;
 import com.example.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,6 +19,7 @@ public class FrozenDimention implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModCreativeModeTab.registerModCreativeModeTabs();
 		LOGGER.info("Hello Fabric world!");
 	}
