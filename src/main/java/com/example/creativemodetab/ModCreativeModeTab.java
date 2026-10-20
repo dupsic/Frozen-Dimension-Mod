@@ -18,7 +18,6 @@ public class ModCreativeModeTab {
                     .title(Component.translatable("creativemodetab.frozen_dimention.frozen_dimention"))
                     .displayItems((parameters, output) -> {
 
-                        output.accept(ModItems.RAW_CRYONITE);
                         output.accept(ModBlocks.DARK_BLUE_STONE);
                         output.accept(ModBlocks.DARK_CRYONITE_ORE);
                         output.accept(ModBlocks.LIGHT_BLUE_STONE);
@@ -26,6 +25,12 @@ public class ModCreativeModeTab {
                         output.accept(ModBlocks.FROZEN_DIRT);
                         output.accept(ModBlocks.FROZEN_GRASS);
                         output.accept(ModBlocks.RAW_CRYONITE_BLOCK);
+
+
+                        output.accept(ModItems.RAW_CRYONITE);
+                        output.accept(ModItems.FROZEN_BERRIES);
+                        output.accept(ModItems.CRYONITE_INGOT);
+                        output.accept(ModItems.FROZEN_COAL);
 
                     })
                     .build());

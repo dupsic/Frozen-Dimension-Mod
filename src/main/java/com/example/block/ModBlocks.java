@@ -1,6 +1,7 @@
 package com.example.block;
 
 import com.example.FrozenDimention;
+import com.example.block.custom.FrozenBerriesBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -49,6 +50,14 @@ public class ModBlocks {
             properties -> new Block(properties.strength(1f)
                     .sound(SoundType.GRAVEL)));
 
+    public static final Block FROZEN_BERRIES_BUSH = registerBlockWithoutBlockItem("frozen_berries_bush",
+            properties -> new FrozenBerriesBlock(properties
+                    .noCollision()
+                    .randomTicks()
+                    .sound(SoundType.SWEET_BERRY_BUSH)));
+
+
+
 
     // reģistrē jaunu bloku spēlē
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
@@ -66,6 +75,11 @@ public class ModBlocks {
         Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name),
                 new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
                         .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name)))));
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name))));
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name), toRegister);
     }
 
 

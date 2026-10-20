@@ -1,6 +1,7 @@
 package com.example.datagen;
 
 import com.example.block.ModBlocks;
+import com.example.block.custom.FrozenBerriesBlock;
 import com.example.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
@@ -25,11 +26,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_CRYONITE_BLOCK);
 
         blockModelGenerators.createTrivialBlock(ModBlocks.FROZEN_GRASS, TexturedModel.CUBE_TOP_BOTTOM);
+        blockModelGenerators.createCrossBlock(ModBlocks.FROZEN_BERRIES_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, FrozenBerriesBlock.AGE, 0,1,2,3);
 
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.RAW_CRYONITE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.CRYONITE_INGOT, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.FROZEN_COAL, ModelTemplates.FLAT_ITEM);
+
     }
 }

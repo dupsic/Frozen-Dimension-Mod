@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.block.food.ModFoods;
 import com.example.datagen.ModBlockLootTableProvider;
 import com.example.datagen.ModBlockTagsProvider;
 import com.example.datagen.ModModelProvider;
