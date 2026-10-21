@@ -1,6 +1,7 @@
 package com.example.datagen;
 
 import com.example.block.ModBlocks;
+import com.example.tags.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
@@ -34,7 +35,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
 
 
-
+        tag(ModTags.Blocks.CRYONITE_MINEABLE)
+                .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE));
 
     }
 }

@@ -32,6 +32,14 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.CRYONITE_INGOT);
                         output.accept(ModItems.FROZEN_COAL);
 
+
+                        output.accept(ModItems.CRYONITE_SWORD);
+                        output.accept(ModItems.CRYONITE_PICKAXE);
+                        output.accept(ModItems.CRYONITE_AXE);
+                        output.accept(ModItems.CRYONITE_SHOVEL);
+                        output.accept(ModItems.CRYONITE_HOE);
+                        output.accept(ModItems.CRYONITE_BOW);
+
                     })
                     .build());
 

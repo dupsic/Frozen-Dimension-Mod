@@ -6,6 +6,12 @@
   "item.frozen-dimention.frozen_berries": "Frozen Berries",
   "item.frozen-dimention.frozen_coal": "Frozen Coal",
 
+  "item.frozen-dimention.cryonite_pickaxe": "Cryonite Pickaxe",
+  "item.frozen-dimention.cryonite_sword": "Cryonite Sword",
+  "item.frozen-dimention.cryonite_axe": "Cryonite Axe",
+  "item.frozen-dimention.cryonite_shovel": "Cryonite Shovel",
+  "item.frozen-dimention.cryonite_hoe": "Cryonite Hoe",
+  "item.frozen-dimention.cryonite_bow": "Cryonite Bow",
 
 
   "block.frozen-dimention.dark_cryonite_ore": "Cryonite Ore",
@@ -15,5 +21,6 @@
   "block.frozen-dimention.frozen_grass": "Frozen Grass",
   "block.frozen-dimention.cryonite_block": "Cryonite Block",
   "block.frozen-dimention.raw_cryonite_block": "Raw Cryonite Block"
+
 
 }

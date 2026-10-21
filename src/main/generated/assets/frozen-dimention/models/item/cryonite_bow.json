@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "frozen-dimention:item/cryonite_bow"
+  }
+}

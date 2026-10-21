@@ -5,8 +5,11 @@ import com.example.creativemodetab.ModCreativeModeTab;
 import com.example.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.TillableBlockRegistry;
 import net.minecraft.resources.Identifier;
 
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.level.block.Blocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +25,22 @@ public class FrozenDimention implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModCreativeModeTab.registerModCreativeModeTabs();
 		LOGGER.info("Hello Fabric world!");
+
+
+
+
+
+		TillableBlockRegistry.register(
+				ModBlocks.FROZEN_GRASS,
+				HoeItem::onlyIfAirAbove,
+				Blocks.FARMLAND.defaultBlockState()
+		);
+
+		TillableBlockRegistry.register(
+				ModBlocks.FROZEN_DIRT,
+				HoeItem::onlyIfAirAbove,
+				Blocks.FARMLAND.defaultBlockState()
+		);
 	}
 
 	public static Identifier id(String path) {
