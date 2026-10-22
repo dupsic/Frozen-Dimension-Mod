@@ -35,6 +35,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.ICEBLOOM_SAPLING,ModBlocks.POTTED_ICEBLOOM_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
 
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_PORTAL);
+
     }
 
     @Override

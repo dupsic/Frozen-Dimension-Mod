@@ -30,5 +30,7 @@
   "block.frozen-dimention.icebloom_planks": "Icebloom Planks",
   "block.frozen-dimention.icebloom_leaves": "Icebloom Leaves",
   "block.frozen-dimention.icebloom_sapling": "Icebloom Sapling",
-  "block.frozen-dimention.potted_icebloom_sapling": "Potted_Icebloom Sapling"
+  "block.frozen-dimention.potted_icebloom_sapling": "Potted_Icebloom Sapling",
+
+  "block.frozen-dimention.frozen_portal": "Frozen Portal Block"
 }

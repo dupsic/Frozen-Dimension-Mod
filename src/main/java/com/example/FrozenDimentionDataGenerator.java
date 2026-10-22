@@ -3,6 +3,7 @@ package com.example;
 import com.example.datagen.*;
 import com.example.worldgen.ModConfiguredFeatures;
 import com.example.worldgen.ModPlacedFeatures;
+import com.example.worldgen.dimension.ModDimensions;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
@@ -26,5 +27,9 @@ public class FrozenDimentionDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+
+
+		registryBuilder.add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
+		registryBuilder.add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType);
 	}
 }

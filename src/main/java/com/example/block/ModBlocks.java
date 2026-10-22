@@ -2,6 +2,7 @@ package com.example.block;
 
 import com.example.FrozenDimention;
 import com.example.block.custom.FrozenBerriesBlock;
+import com.example.block.custom.FrozenPortalBlock;
 import com.example.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
@@ -94,6 +95,10 @@ public class ModBlocks {
     public static final Block POTTED_ICEBLOOM_SAPLING = registerBlockWithoutBlockItem("potted_icebloom_sapling",
             properties -> new FlowerPotBlock(ICEBLOOM_SAPLING,
                     properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+
+    public static final Block FROZEN_PORTAL = registerBlock("frozen_portal",
+            properties -> new FrozenPortalBlock(properties.strength(3f)));
 
 
 
