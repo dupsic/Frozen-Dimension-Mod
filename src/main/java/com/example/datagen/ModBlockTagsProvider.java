@@ -38,5 +38,22 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
         tag(ModTags.Blocks.CRYONITE_MINEABLE)
                 .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE));
 
+
+        tag(ModTags.Blocks.ICEBLOOM_LOGS)
+                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_LOG))
+                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_WOOD))
+                .add(ModBlocks.getRK(ModBlocks.STRIPPED_ICEBLOOM_WOOD))
+                .add(ModBlocks.getRK(ModBlocks.STRIPPED_ICEBLOOM_LOG));
+
+        tag(BlockTags.LOGS)
+                .addTag(ModTags.Blocks.ICEBLOOM_LOGS);
+
+        tag(BlockTags.PLANKS)
+                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_PLANKS));
+
+        tag(BlockTags.LEAVES)
+                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_LEAVES));
+
+
     }
 }

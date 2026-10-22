@@ -25,7 +25,14 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.FROZEN_GRASS, block -> createSingleItemTableWithSilkTouch(block, ModBlocks.FROZEN_DIRT));
 
         add(ModBlocks.DARK_CRYONITE_ORE, createOreDrop(ModBlocks.DARK_CRYONITE_ORE, ModItems.RAW_CRYONITE));
-//        add(ModBlocks.LIGHT_BLUE_STONE, createOreDrop(ModBlocks.LIGHT_BLUE_STONE, ModItems.RAW_CRYONITE));
+
+        dropSelf(ModBlocks.ICEBLOOM_WOOD);
+        dropSelf(ModBlocks.ICEBLOOM_LOG);
+        dropSelf(ModBlocks.STRIPPED_ICEBLOOM_LOG);
+        dropSelf(ModBlocks.ICEBLOOM_PLANKS);
+        dropSelf(ModBlocks.STRIPPED_ICEBLOOM_WOOD);
+
+        add(ModBlocks.ICEBLOOM_LEAVES, block -> createLeavesDrops(block, ModBlocks.ICEBLOOM_LEAVES, NORMAL_LEAVES_SAPLING_CHANCES));
 
 
 

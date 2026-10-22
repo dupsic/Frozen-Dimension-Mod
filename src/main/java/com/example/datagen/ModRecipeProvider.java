@@ -2,6 +2,7 @@ package com.example.datagen;
 
 import com.example.block.ModBlocks;
 import com.example.item.ModItems;
+import com.example.tags.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
@@ -124,6 +125,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.RAW_CRYONITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CRYONITE_BLOCK);
 
 
+                woodFromLogs(ModBlocks.ICEBLOOM_WOOD, ModBlocks.ICEBLOOM_LOG);
+                woodFromLogs(ModBlocks.STRIPPED_ICEBLOOM_WOOD, ModBlocks.STRIPPED_ICEBLOOM_LOG);
+
+                planksFromLogs(ModBlocks.ICEBLOOM_PLANKS, ModTags.Items.ICEBLOOM_LOGS, 4);
 
             }
         };

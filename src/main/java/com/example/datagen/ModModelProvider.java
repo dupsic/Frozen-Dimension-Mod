@@ -27,6 +27,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialBlock(ModBlocks.FROZEN_GRASS, TexturedModel.CUBE_TOP_BOTTOM);
         blockModelGenerators.createCrossBlock(ModBlocks.FROZEN_BERRIES_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, FrozenBerriesBlock.AGE, 0,1,2,3);
 
+        blockModelGenerators.woodProvider(ModBlocks.ICEBLOOM_LOG).log(ModBlocks.ICEBLOOM_LOG).wood(ModBlocks.ICEBLOOM_WOOD);
+        blockModelGenerators.woodProvider(ModBlocks.STRIPPED_ICEBLOOM_LOG).log(ModBlocks.STRIPPED_ICEBLOOM_LOG).wood(ModBlocks.STRIPPED_ICEBLOOM_WOOD);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.ICEBLOOM_PLANKS);
+        blockModelGenerators.createTrivialBlock(ModBlocks.ICEBLOOM_LEAVES, TexturedModel.LEAVES);
+
     }
 
     @Override

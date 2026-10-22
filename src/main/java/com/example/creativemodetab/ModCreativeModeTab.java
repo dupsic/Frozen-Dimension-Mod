@@ -26,6 +26,12 @@ public class ModCreativeModeTab {
                         output.accept(ModBlocks.FROZEN_GRASS);
                         output.accept(ModBlocks.RAW_CRYONITE_BLOCK);
 
+                        output.accept(ModBlocks.ICEBLOOM_LEAVES);
+                        output.accept(ModBlocks.ICEBLOOM_LOG);
+                        output.accept(ModBlocks.ICEBLOOM_PLANKS);
+                        output.accept(ModBlocks.ICEBLOOM_WOOD);
+                        output.accept(ModBlocks.STRIPPED_ICEBLOOM_LOG);
+                        output.accept(ModBlocks.STRIPPED_ICEBLOOM_WOOD);
 
                         output.accept(ModItems.RAW_CRYONITE);
                         output.accept(ModItems.FROZEN_BERRIES);

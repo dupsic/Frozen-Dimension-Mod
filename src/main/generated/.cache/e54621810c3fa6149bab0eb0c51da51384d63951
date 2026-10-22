@@ -1,5 +1,9 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimention/Tags for minecraft:block
 315f10138196ca8c19bf1f28d22f610b2db9d807 data/frozen-dimention/tags/block/cryonite_mineable.json
+49ad6fc4540bbb7ff54734d2109eded53f937989 data/frozen-dimention/tags/block/icebloom_logs.json
+3cb633e1c5c84c9dfd977bfc63c91e0526548e3f data/minecraft/tags/block/leaves.json
+c183411268fc5117cf73510092fd21896daf2d75 data/minecraft/tags/block/logs.json
 0c10f7a4ef3a57419d8eb2e50137f7737957cf28 data/minecraft/tags/block/mineable/pickaxe.json
 c139e5a8b396841e5ef8233b04d6d2879db83cd0 data/minecraft/tags/block/mineable/shovel.json
 0c10f7a4ef3a57419d8eb2e50137f7737957cf28 data/minecraft/tags/block/needs_iron_tool.json
+352818c14b696d84b9e02c0bfd3f091dd84a6138 data/minecraft/tags/block/planks.json

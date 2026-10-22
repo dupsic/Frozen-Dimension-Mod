@@ -14,6 +14,10 @@ import java.util.function.Function;
 
 public class ModItems {
 
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
+
     public static final Item RAW_CRYONITE = registerItem("raw_cryonite", Item::new);
     public static final Item FROZEN_BERRIES = registerItem("frozen_berries", properties -> new BlockItem(ModBlocks.FROZEN_BERRIES_BUSH, properties.food(ModFoods.FROZEN_BERRIES, ModFoods.FROZEN_BERRIES_CONSUMABLE)));
     public static final Item FROZEN_COAL = registerItem("frozen_coal", Item::new);

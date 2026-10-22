@@ -3,15 +3,17 @@ package com.example.block;
 import com.example.FrozenDimention;
 import com.example.block.custom.FrozenBerriesBlock;
 import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
 
@@ -55,6 +57,39 @@ public class ModBlocks {
                     .noCollision()
                     .randomTicks()
                     .sound(SoundType.SWEET_BERRY_BUSH)));
+
+    public static final Block ICEBLOOM_LOG = registerBlock("icebloom_log",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block ICEBLOOM_WOOD = registerBlock("icebloom_wood",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block STRIPPED_ICEBLOOM_LOG = registerBlock("stripped_icebloom_log",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block STRIPPED_ICEBLOOM_WOOD = registerBlock("stripped_icebloom_wood",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block ICEBLOOM_PLANKS = registerBlock("icebloom_planks",
+            properties -> new Block(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block ICEBLOOM_LEAVES = registerBlock("icebloom_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.CHERRY_LEAVES, properties.mapColor(MapColor.PLANT)
+                    .strength(0.2F)
+                    .randomTicks()
+                    .sound(SoundType.AZALEA_LEAVES)
+                    .noOcclusion()
+                    .isValidSpawn(Blocks::ocelotOrParrot)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor(Blocks::never)));
+
+
+
+
+
 
 
 
