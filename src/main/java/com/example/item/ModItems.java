@@ -19,9 +19,8 @@ public class ModItems {
     public static final Item FROZEN_COAL = registerItem("frozen_coal", Item::new);
     public static final Item CRYONITE_INGOT = registerItem("cryonite_ingot", Item::new);
 
-
-    public static final Item CRYONITE_PICKAXE = registerItem("cryonite_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.CRYONITE, 3F , -2.8F)));
-    public static final Item CRYONITE_SWORD = registerItem("cryonite_sword", properties -> new Item(properties.sword(ModToolMaterials.CRYONITE, 1F , -2.8F)));
+    public static final Item CRYONITE_PICKAXE = registerItem("cryonite_pickaxe", properties -> new Item(properties.pickaxe(ModToolMaterials.CRYONITE, 1F , -2.8F)));
+    public static final Item CRYONITE_SWORD = registerItem("cryonite_sword", properties -> new Item(properties.sword(ModToolMaterials.CRYONITE, 3F , -2.8F)));
     public static final Item CRYONITE_SHOVEL = registerItem("cryonite_shovel",
             properties -> new ShovelItem(ModToolMaterials.CRYONITE, 1.5F, -3.0F, properties));
     public static final Item CRYONITE_AXE = registerItem("cryonite_axe",
@@ -30,9 +29,6 @@ public class ModItems {
             properties -> new HoeItem(ModToolMaterials.CRYONITE, 0F, -3.0F, properties));
 
     public static final Item CRYONITE_BOW = registerItem("cryonite_bow", properties -> new BowItem(properties.durability(500)));
-
-
-
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
