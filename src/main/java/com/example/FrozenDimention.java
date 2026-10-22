@@ -6,6 +6,7 @@ import com.example.item.ModItems;
 import com.example.registries.ModFlammableBlocks;
 import com.example.registries.ModFuels;
 import com.example.registries.ModStrippedableBlocks;
+import com.example.worldgen.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.TillableBlockRegistry;
@@ -26,10 +27,14 @@ public class FrozenDimention implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 		ModCreativeModeTab.registerModCreativeModeTabs();
+
 		ModFuels.registerFuels();
 		ModFlammableBlocks.registerFlammableBlocks();
 		ModStrippedableBlocks.registerStrippableBlocks();
+
+		ModWorldGeneration.generateModWorldGen();
 		LOGGER.info("Hello Fabric world!");
 
 

@@ -2,6 +2,7 @@ package com.example.block;
 
 import com.example.FrozenDimention;
 import com.example.block.custom.FrozenBerriesBlock;
+import com.example.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -74,7 +75,7 @@ public class ModBlocks {
             properties -> new Block(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
 
     public static final Block ICEBLOOM_LEAVES = registerBlock("icebloom_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.CHERRY_LEAVES, properties.mapColor(MapColor.PLANT)
+            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.SNOWFLAKE, properties.mapColor(MapColor.PLANT)
                     .strength(0.2F)
                     .randomTicks()
                     .sound(SoundType.AZALEA_LEAVES)
@@ -86,6 +87,13 @@ public class ModBlocks {
                     .pushReaction(PushReaction.DESTROY)
                     .isRedstoneConductor(Blocks::never)));
 
+    public static final Block ICEBLOOM_SAPLING = registerBlock("icebloom_sapling",
+            properties -> new SaplingBlock(ModTreeGrowers.ICEBLOOM,
+                    properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+
+    public static final Block POTTED_ICEBLOOM_SAPLING = registerBlockWithoutBlockItem("potted_icebloom_sapling",
+            properties -> new FlowerPotBlock(ICEBLOOM_SAPLING,
+                    properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
 

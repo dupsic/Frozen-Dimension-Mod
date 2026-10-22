@@ -1,11 +1,13 @@
 package com.example.datagen;
 
 import com.example.block.ModBlocks;
+import com.example.item.ModItems;
 import com.example.tags.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -53,6 +55,14 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
 
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_LEAVES));
+
+        tag(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.getRK(ModBlocks.POTTED_ICEBLOOM_SAPLING));
+
+        tag(BlockTags.SUPPORTS_VEGETATION)
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_DIRT))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
+
 
 
     }

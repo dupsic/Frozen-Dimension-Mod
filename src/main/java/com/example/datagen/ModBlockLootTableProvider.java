@@ -32,8 +32,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.ICEBLOOM_PLANKS);
         dropSelf(ModBlocks.STRIPPED_ICEBLOOM_WOOD);
 
-        add(ModBlocks.ICEBLOOM_LEAVES, block -> createLeavesDrops(block, ModBlocks.ICEBLOOM_LEAVES, NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.ICEBLOOM_LEAVES, block -> createLeavesDrops(block, ModBlocks.ICEBLOOM_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
 
+        dropSelf(ModBlocks.ICEBLOOM_SAPLING);
+        add(ModBlocks.POTTED_ICEBLOOM_SAPLING, block -> createPotFlowerItemTable(ModBlocks.ICEBLOOM_SAPLING));
 
 
 

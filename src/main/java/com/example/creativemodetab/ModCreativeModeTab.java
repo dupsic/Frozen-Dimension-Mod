@@ -33,6 +33,8 @@ public class ModCreativeModeTab {
                         output.accept(ModBlocks.STRIPPED_ICEBLOOM_LOG);
                         output.accept(ModBlocks.STRIPPED_ICEBLOOM_WOOD);
 
+                        output.accept(ModBlocks.ICEBLOOM_SAPLING);
+
                         output.accept(ModItems.RAW_CRYONITE);
                         output.accept(ModItems.FROZEN_BERRIES);
                         output.accept(ModItems.CRYONITE_INGOT);

@@ -2,7 +2,7 @@ package com.example.item;
 
 import com.example.FrozenDimention;
 import com.example.block.ModBlocks;
-import com.example.block.food.ModFoods;
+import com.example.food.ModFoods;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;

@@ -33,6 +33,10 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.getRK(ModBlocks.ICEBLOOM_PLANKS.asItem()));
         tag(ItemTags.LEAVES)
                 .add(ModItems.getRK(ModBlocks.ICEBLOOM_LEAVES.asItem()));
+
+        tag(ItemTags.SAPLINGS)
+                .add(ModItems.getRK(ModBlocks.ICEBLOOM_SAPLING.asItem()));
+
     }
 
 }

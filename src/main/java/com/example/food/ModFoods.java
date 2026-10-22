@@ -1,4 +1,4 @@
-package com.example.block.food;
+package com.example.food;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
