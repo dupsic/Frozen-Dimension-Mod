@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_frozen_grass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "frozen-dimention:frozen_grass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "frozen-dimention:dirt_from_blasting_frozen_grass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_frozen_grass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frozen-dimention:dirt_from_blasting_frozen_grass"
+    ]
+  }
+}

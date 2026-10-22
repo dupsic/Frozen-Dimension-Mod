@@ -3,6 +3,7 @@ package com.example;
 import com.example.block.ModBlocks;
 import com.example.creativemodetab.ModCreativeModeTab;
 import com.example.item.ModItems;
+import com.example.registries.ModFuels;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.TillableBlockRegistry;
@@ -24,6 +25,7 @@ public class FrozenDimention implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModCreativeModeTab.registerModCreativeModeTabs();
+		ModFuels.registerFuels();
 		LOGGER.info("Hello Fabric world!");
 
 

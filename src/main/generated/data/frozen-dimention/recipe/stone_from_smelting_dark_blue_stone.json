@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.25,
+  "group": "frozen",
+  "ingredient": "frozen-dimention:dark_blue_stone",
+  "result": {
+    "id": "minecraft:stone"
+  }
+}

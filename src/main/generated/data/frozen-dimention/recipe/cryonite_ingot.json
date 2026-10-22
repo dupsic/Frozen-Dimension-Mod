@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "frozen-dimention:cryonite_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "frozen-dimention:cryonite_ingot"
+  }
+}
