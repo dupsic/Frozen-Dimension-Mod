@@ -3,7 +3,9 @@ package com.example;
 import com.example.datagen.*;
 import com.example.worldgen.ModConfiguredFeatures;
 import com.example.worldgen.ModPlacedFeatures;
+import com.example.worldgen.biome.ModBiomes;
 import com.example.worldgen.dimension.ModDimensions;
+import com.example.worldgen.dimension.ModNoiseSettings;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
@@ -31,5 +33,8 @@ public class FrozenDimentionDataGenerator implements DataGeneratorEntrypoint {
 
 		registryBuilder.add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 		registryBuilder.add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType);
+
+		registryBuilder.add(Registries.BIOME, ModBiomes::bootstrap);
+		registryBuilder.add(Registries.NOISE_SETTINGS, ModNoiseSettings::bootstrap);
 	}
 }

@@ -9,16 +9,16 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> ICEBLOOM_PLACED_KEY = registerKey("icebloom_placed");
-
+    public static final ResourceKey<PlacedFeature> CRYONITE_ORE_PLACED_KEY = registerKey("cryonite_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -26,6 +26,16 @@ public class ModPlacedFeatures {
         register(context, ICEBLOOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.ICEBLOOM_SAPLING));
+
+
+        register(context, CRYONITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYONITE_ORE_KEY),
+                List.of(
+                        CountPlacement.of(8),
+                        InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(32)),
+                        BiomeFilter.biome()
+                )
+        );
     }
 
 

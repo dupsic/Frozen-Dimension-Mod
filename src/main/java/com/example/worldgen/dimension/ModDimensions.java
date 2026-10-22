@@ -1,6 +1,7 @@
 package com.example.worldgen.dimension;
 
 import com.example.FrozenDimention;
+import com.example.worldgen.biome.ModBiomes;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -46,8 +47,8 @@ public class ModDimensions {
                  false, // hasEnderDragonFight
                  1.0, // coordinateScale
                  -64, // minY
-                 256, // height
-                 256, // logicalHeight
+                 384, // height
+                 384, // logicalHeight
                  blocks.getOrThrow(BlockTags.INFINIBURN_END), // infiniburn
                  0.0f, // ambientLight
                  new DimensionType.MonsterSettings(ConstantInt.of(0), 0),
@@ -76,21 +77,10 @@ public class ModDimensions {
         HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
-        NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
-                new FixedBiomeSource(biomeRegistry.getOrThrow(Biomes.CHERRY_GROVE)),
-                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
+        NoiseBasedChunkGenerator chunkGenerator = new NoiseBasedChunkGenerator(new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.FROZEN_FOREST)),
+                        noiseGenSettings.getOrThrow(ModNoiseSettings.FROZEN_NOISE));
 
-        NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
-                MultiNoiseBiomeSource.createFromList(
-                        new Climate.ParameterList<>(List.of(
-                                Pair.of(Climate.parameters(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.CHERRY_GROVE)),
-                                Pair.of(Climate.parameters(0.1F, 0.2F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.BIRCH_FOREST)),
-                                Pair.of(Climate.parameters(0.3F, 0.6F, 0.1F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.OCEAN)),
-                                Pair.of(Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.DARK_FOREST))
-                        ))),
-                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
-
-        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.FROZEN_DIM_TYPE), noiseBasedChunkGenerator);
+        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.FROZEN_DIM_TYPE), chunkGenerator);
 
         context.register(FROZEN_KEY, stem);
     }

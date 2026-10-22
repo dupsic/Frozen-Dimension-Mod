@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -19,9 +20,13 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePl
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.CherryTrunkPlacer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ICEBLOOM_KEY = registerKey("icebloom");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CRYONITE_ORE_KEY = registerKey("cryonite_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -40,6 +45,10 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(Blocks.DIRT)).build());
 
 
+
+        List<OreConfiguration.TargetBlockState> Cryonite = List.of(OreConfiguration.target(new BlockMatchTest(ModBlocks.DARK_BLUE_STONE), ModBlocks.DARK_CRYONITE_ORE.defaultBlockState()));
+
+        register(context, CRYONITE_ORE_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
 
     }
 
