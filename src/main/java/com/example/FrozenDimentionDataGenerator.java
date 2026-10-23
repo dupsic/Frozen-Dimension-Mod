@@ -30,7 +30,6 @@ public class FrozenDimentionDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 
-
 		registryBuilder.add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 		registryBuilder.add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType);
 

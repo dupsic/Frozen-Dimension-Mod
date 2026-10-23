@@ -8,4 +8,5 @@ c183411268fc5117cf73510092fd21896daf2d75 data/minecraft/tags/block/logs.json
 c139e5a8b396841e5ef8233b04d6d2879db83cd0 data/minecraft/tags/block/mineable/shovel.json
 0c10f7a4ef3a57419d8eb2e50137f7737957cf28 data/minecraft/tags/block/needs_iron_tool.json
 352818c14b696d84b9e02c0bfd3f091dd84a6138 data/minecraft/tags/block/planks.json
+614efcf2cf9759192bb5ed706c35ff7ab2249ad5 data/minecraft/tags/block/stone_ore_replaceables.json
 c139e5a8b396841e5ef8233b04d6d2879db83cd0 data/minecraft/tags/block/supports_vegetation.json

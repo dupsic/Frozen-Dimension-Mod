@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Block;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -64,7 +65,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_DIRT))
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
 
-
+        tag(BlockTags.STONE_ORE_REPLACEABLES)
+                .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE));
 
     }
 }
