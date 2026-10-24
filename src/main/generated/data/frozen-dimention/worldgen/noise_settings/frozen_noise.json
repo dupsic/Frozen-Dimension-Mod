@@ -1,7 +1,7 @@
 {
   "aquifers_enabled": true,
   "default_block": {
-    "Name": "frozen-dimention:dark_blue_stone"
+    "Name": "frozen-dimention:light_blue_stone"
   },
   "default_fluid": {
     "Name": "minecraft:water",

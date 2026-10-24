@@ -6,10 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "frozen-dimention:dark_cryonite_ore"
+          "Name": "frozen-dimention:cryonite_ore"
         },
         "target": {
-          "block": "frozen-dimention:dark_blue_stone",
+          "block": "frozen-dimention:light_blue_stone",
           "predicate_type": "minecraft:block_match"
         }
       }

@@ -20,14 +20,14 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.CRYONITE_ORE))
                 .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.RAW_CRYONITE_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.CRYONITE_BLOCK));
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.CRYONITE_ORE))
                 .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.RAW_CRYONITE_BLOCK))
@@ -39,7 +39,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
 
 
         tag(ModTags.Blocks.CRYONITE_MINEABLE)
-                .add(ModBlocks.getRK(ModBlocks.DARK_CRYONITE_ORE));
+                .add(ModBlocks.getRK(ModBlocks.CRYONITE_ORE));
 
 
 

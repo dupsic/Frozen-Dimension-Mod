@@ -8,16 +8,22 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.references.BlockItemIds;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
+
+import static net.minecraft.world.level.block.Blocks.litBlockEmission;
 
 public class ModBlocks {
 
@@ -26,9 +32,9 @@ public class ModBlocks {
     }
 
 
-    public static final Block DARK_CRYONITE_ORE = registerBlock("dark_cryonite_ore",
+    public static final Block CRYONITE_ORE = registerBlock("cryonite_ore",
             properties -> new Block(properties.strength(3f)
-                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                    .requiresCorrectToolForDrops().strength(3f).sound(SoundType.STONE)));
 
     public static final Block DARK_BLUE_STONE = registerBlock("dark_blue_stone",
             properties -> new Block(properties.strength(3f)
@@ -37,6 +43,37 @@ public class ModBlocks {
     public static final Block LIGHT_BLUE_STONE = registerBlock("light_blue_stone",
             properties -> new Block(properties.strength(3f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+// ores
+    public static final Block FROZEN_IRON_ORE = registerBlock("frozen_iron_ore",
+            properties -> new DropExperienceBlock(ConstantInt.of(0),
+                    properties.requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+
+    public static final Block FROZEN_LAPIS_ORE = registerBlock("frozen_lapis_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(2,5),
+                    properties.requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+
+    public static final Block FROZEN_EMERALD_ORE = registerBlock("frozen_emerald_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3,7),
+                    properties.requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+
+    public static final Block FROZEN_DIAMOND_ORE = registerBlock("frozen_diamond_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3,7),
+                    properties.requiresCorrectToolForDrops().strength(3.0F, 3.0F)));
+
+    public static final Block FROZEN_REDSTONE_ORE = registerBlock("frozen_redstone_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(3,7),
+                    properties.requiresCorrectToolForDrops().randomTicks().strength(3.0F, 3.0F)));
+
+    public static final Block FROZEN_COPPER_ORE = registerBlock("frozen_copper_ore",
+            properties -> new Block(properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final Block FROZEN_GOLD_ORE = registerBlock("frozen_gold_ore",
+            properties -> new DropExperienceBlock(ConstantInt.of(0),
+                    properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final Block FROZEN_COAL_ORE = registerBlock("frozen_coal_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(0,2),
+                    properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final Block RAW_CRYONITE_BLOCK = registerBlock("raw_cryonite_block",
             properties -> new Block(properties.strength(3f)

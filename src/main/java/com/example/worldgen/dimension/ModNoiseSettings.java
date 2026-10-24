@@ -30,7 +30,7 @@ public class ModNoiseSettings {
         NoiseGeneratorSettings settings =
                 new NoiseGeneratorSettings(
                         NoiseSettings.create(-64, 384, 1, 2),
-                        ModBlocks.DARK_BLUE_STONE.defaultBlockState(),
+                        ModBlocks.LIGHT_BLUE_STONE.defaultBlockState(),
                         Blocks.WATER.defaultBlockState(),
                         noiseRouter,
                         ModSurfaceRules.createRules(),

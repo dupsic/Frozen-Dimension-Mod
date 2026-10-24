@@ -19,12 +19,19 @@ public class ModCreativeModeTab {
                     .displayItems((parameters, output) -> {
 
                         output.accept(ModBlocks.DARK_BLUE_STONE);
-                        output.accept(ModBlocks.DARK_CRYONITE_ORE);
+                        output.accept(ModBlocks.CRYONITE_ORE);
                         output.accept(ModBlocks.LIGHT_BLUE_STONE);
                         output.accept(ModBlocks.CRYONITE_BLOCK);
                         output.accept(ModBlocks.FROZEN_DIRT);
                         output.accept(ModBlocks.FROZEN_GRASS);
-                        output.accept(ModBlocks.RAW_CRYONITE_BLOCK);
+                        output.accept(ModBlocks.FROZEN_COAL_ORE);
+                        output.accept(ModBlocks.FROZEN_COPPER_ORE);
+                        output.accept(ModBlocks.FROZEN_DIAMOND_ORE);
+                        output.accept(ModBlocks.FROZEN_EMERALD_ORE);
+                        output.accept(ModBlocks.FROZEN_GOLD_ORE);
+                        output.accept(ModBlocks.FROZEN_IRON_ORE);
+                        output.accept(ModBlocks.FROZEN_LAPIS_ORE);
+                        output.accept(ModBlocks.FROZEN_REDSTONE_ORE);
 
                         output.accept(ModBlocks.ICEBLOOM_LEAVES);
                         output.accept(ModBlocks.ICEBLOOM_LOG);

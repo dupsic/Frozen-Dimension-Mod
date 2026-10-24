@@ -17,11 +17,19 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
-        blockModelGenerators.createTrivialCube(ModBlocks.DARK_CRYONITE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.CRYONITE_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.DARK_BLUE_STONE);
         blockModelGenerators.createTrivialCube(ModBlocks.LIGHT_BLUE_STONE);
         blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_DIRT);
         blockModelGenerators.createTrivialCube(ModBlocks.CRYONITE_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_REDSTONE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_LAPIS_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_IRON_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_GOLD_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_EMERALD_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_DIAMOND_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_COPPER_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_COAL_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_CRYONITE_BLOCK);
 
         blockModelGenerators.createTrivialBlock(ModBlocks.FROZEN_GRASS, TexturedModel.CUBE_TOP_BOTTOM);

@@ -46,7 +46,7 @@ public class ModConfiguredFeatures {
 
 
 
-        List<OreConfiguration.TargetBlockState> Cryonite = List.of(OreConfiguration.target(new BlockMatchTest(ModBlocks.DARK_BLUE_STONE), ModBlocks.DARK_CRYONITE_ORE.defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> Cryonite = List.of(OreConfiguration.target(new BlockMatchTest(ModBlocks.LIGHT_BLUE_STONE), ModBlocks.CRYONITE_ORE.defaultBlockState()));
 
         register(context, CRYONITE_ORE_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
 

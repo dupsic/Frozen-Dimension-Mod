@@ -27,7 +27,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
-                List<ItemLike> CRYONITE_SMELTABLES = List.of(ModItems.RAW_CRYONITE, ModBlocks.DARK_CRYONITE_ORE);
+                List<ItemLike> CRYONITE_SMELTABLES = List.of(ModItems.RAW_CRYONITE, ModBlocks.CRYONITE_ORE);
                 List<ItemLike> CRYONITE_DIRT_SMELTABLES = List.of(ModBlocks.FROZEN_DIRT, ModBlocks.FROZEN_GRASS);
                 List<ItemLike> CRYONITE_STONE_SMELTABLES = List.of(ModBlocks.DARK_BLUE_STONE, ModBlocks.LIGHT_BLUE_STONE);
 

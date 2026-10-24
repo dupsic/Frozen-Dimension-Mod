@@ -5,6 +5,7 @@ import com.example.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,7 +25,15 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         add(ModBlocks.FROZEN_GRASS, block -> createSingleItemTableWithSilkTouch(block, ModBlocks.FROZEN_DIRT));
 
-        add(ModBlocks.DARK_CRYONITE_ORE, createOreDrop(ModBlocks.DARK_CRYONITE_ORE, ModItems.RAW_CRYONITE));
+        add(ModBlocks.CRYONITE_ORE, createOreDrop(ModBlocks.CRYONITE_ORE, ModItems.RAW_CRYONITE));
+        add(ModBlocks.FROZEN_COAL_ORE, createOreDrop(ModBlocks.FROZEN_COAL_ORE, Items.COAL));
+        add(ModBlocks.FROZEN_COPPER_ORE, createOreDrop(ModBlocks.FROZEN_COPPER_ORE, Items.RAW_COPPER));
+        add(ModBlocks.FROZEN_DIAMOND_ORE, createOreDrop(ModBlocks.FROZEN_DIAMOND_ORE, Items.DIAMOND));
+        add(ModBlocks.FROZEN_EMERALD_ORE, createOreDrop(ModBlocks.FROZEN_EMERALD_ORE, Items.EMERALD));
+        add(ModBlocks.FROZEN_GOLD_ORE, createOreDrop(ModBlocks.FROZEN_GOLD_ORE, Items.RAW_GOLD));
+        add(ModBlocks.FROZEN_IRON_ORE, createOreDrop(ModBlocks.FROZEN_IRON_ORE, Items.RAW_IRON));
+        add(ModBlocks.FROZEN_LAPIS_ORE, createOreDrop(ModBlocks.FROZEN_LAPIS_ORE, Items.LAPIS_LAZULI));
+        add(ModBlocks.FROZEN_REDSTONE_ORE, createOreDrop(ModBlocks.FROZEN_REDSTONE_ORE, Items.REDSTONE));
 
         dropSelf(ModBlocks.ICEBLOOM_WOOD);
         dropSelf(ModBlocks.ICEBLOOM_LOG);
