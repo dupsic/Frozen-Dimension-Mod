@@ -20,6 +20,14 @@
   "block.frozen-dimention.frozen_dirt": "Frozen Dirt",
   "block.frozen-dimention.frozen_grass": "Frozen Grass",
   "block.frozen-dimention.cryonite_block": "Cryonite Block",
+  "block.frozen-dimention.frozen_iron_ore": "Frozen Iron Ore",
+  "block.frozen-dimention.frozen_diamond_ore": "Frozen Diamond Ore",
+  "block.frozen-dimention.frozen_copper_ore": "Frozen Copper Ore",
+  "block.frozen-dimention.frozen_redstone_ore": "Frozen Redstone Ore",
+  "block.frozen-dimention.frozen_lapis_ore": "Frozen Lapi Ore",
+  "block.frozen-dimention.frozen_emerald_ore": "Frozen Emerald Ore",
+  "block.frozen-dimention.frozen_coal_ore": "Frozen Coal Ore",
+  "block.frozen-dimention.frozen_gold_ore": "Frozen Gold Ore",
   "block.frozen-dimention.raw_cryonite_block": "Raw Cryonite Block",
 
 
