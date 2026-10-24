@@ -24,6 +24,14 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.RAW_CRYONITE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_COPPER_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_COAL_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_DIAMOND_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_EMERALD_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_GOLD_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_IRON_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_LAPIS_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_REDSTONE_ORE))
                 .add(ModBlocks.getRK(ModBlocks.CRYONITE_BLOCK));
 
         tag(BlockTags.NEEDS_IRON_TOOL)
@@ -31,8 +39,17 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE))
                 .add(ModBlocks.getRK(ModBlocks.RAW_CRYONITE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_DIAMOND_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_REDSTONE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_GOLD_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_EMERALD_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_LAPIS_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_COPPER_ORE))
                 .add(ModBlocks.getRK(ModBlocks.CRYONITE_BLOCK));
 
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_COAL_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_IRON_ORE));
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_DIRT))
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
@@ -66,7 +83,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
 
         tag(BlockTags.STONE_ORE_REPLACEABLES)
-                .add(ModBlocks.getRK(ModBlocks.DARK_BLUE_STONE));
+                .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE));
 
     }
 }

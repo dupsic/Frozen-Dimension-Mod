@@ -4,9 +4,10 @@ ec2380712da62884d0e9457d445f683392ff0163 data/frozen-dimention/tags/block/cryoni
 fd0c6d0eceaec072d3d8fd5964aba397e96150e9 data/minecraft/tags/block/flower_pots.json
 3cb633e1c5c84c9dfd977bfc63c91e0526548e3f data/minecraft/tags/block/leaves.json
 c183411268fc5117cf73510092fd21896daf2d75 data/minecraft/tags/block/logs.json
-fa689945ed5548641b659e1423d1c1bde24c5dab data/minecraft/tags/block/mineable/pickaxe.json
+ad73d0af8200a3802c14167fcbdfde2b94ade55f data/minecraft/tags/block/mineable/pickaxe.json
 c139e5a8b396841e5ef8233b04d6d2879db83cd0 data/minecraft/tags/block/mineable/shovel.json
-fa689945ed5548641b659e1423d1c1bde24c5dab data/minecraft/tags/block/needs_iron_tool.json
+0d02889d4e855f2ded7b8bdd2acad56c080d92eb data/minecraft/tags/block/needs_iron_tool.json
+2dac7d425181ae5b4dee3193666edaad26e0465c data/minecraft/tags/block/needs_stone_tool.json
 352818c14b696d84b9e02c0bfd3f091dd84a6138 data/minecraft/tags/block/planks.json
-614efcf2cf9759192bb5ed706c35ff7ab2249ad5 data/minecraft/tags/block/stone_ore_replaceables.json
+70ae205c1df6d2453323bc4c4348666b712f0775 data/minecraft/tags/block/stone_ore_replaceables.json
 c139e5a8b396841e5ef8233b04d6d2879db83cd0 data/minecraft/tags/block/supports_vegetation.json

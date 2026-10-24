@@ -27,13 +27,13 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         add(ModBlocks.CRYONITE_ORE, createOreDrop(ModBlocks.CRYONITE_ORE, ModItems.RAW_CRYONITE));
         add(ModBlocks.FROZEN_COAL_ORE, createOreDrop(ModBlocks.FROZEN_COAL_ORE, Items.COAL));
-        add(ModBlocks.FROZEN_COPPER_ORE, createOreDrop(ModBlocks.FROZEN_COPPER_ORE, Items.RAW_COPPER));
+        add(ModBlocks.FROZEN_COPPER_ORE, createCopperOreDrops(ModBlocks.FROZEN_COPPER_ORE));
         add(ModBlocks.FROZEN_DIAMOND_ORE, createOreDrop(ModBlocks.FROZEN_DIAMOND_ORE, Items.DIAMOND));
         add(ModBlocks.FROZEN_EMERALD_ORE, createOreDrop(ModBlocks.FROZEN_EMERALD_ORE, Items.EMERALD));
         add(ModBlocks.FROZEN_GOLD_ORE, createOreDrop(ModBlocks.FROZEN_GOLD_ORE, Items.RAW_GOLD));
         add(ModBlocks.FROZEN_IRON_ORE, createOreDrop(ModBlocks.FROZEN_IRON_ORE, Items.RAW_IRON));
-        add(ModBlocks.FROZEN_LAPIS_ORE, createOreDrop(ModBlocks.FROZEN_LAPIS_ORE, Items.LAPIS_LAZULI));
-        add(ModBlocks.FROZEN_REDSTONE_ORE, createOreDrop(ModBlocks.FROZEN_REDSTONE_ORE, Items.REDSTONE));
+        add(ModBlocks.FROZEN_LAPIS_ORE, createLapisOreDrops(ModBlocks.FROZEN_LAPIS_ORE));
+        add(ModBlocks.FROZEN_REDSTONE_ORE, createRedstoneOreDrops(ModBlocks.FROZEN_REDSTONE_ORE));
 
         dropSelf(ModBlocks.ICEBLOOM_WOOD);
         dropSelf(ModBlocks.ICEBLOOM_LOG);
