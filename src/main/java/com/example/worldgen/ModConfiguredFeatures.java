@@ -27,7 +27,13 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ICEBLOOM_KEY = registerKey("icebloom");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYONITE_ORE_KEY = registerKey("cryonite_ore");
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_COAL_KEY = registerKey("frozen_coal");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_IRON_KEY = registerKey("frozen_iron");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_DIAMOND_KEY = registerKey("frozen_diamond");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_GOLD_KEY = registerKey("frozen_gold");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_EMERALD_KEY = registerKey("frozen_emerald");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_REDSTONE_KEY = registerKey("frozen_restone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_COPPER_KEY = registerKey("frozen_copper");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -49,6 +55,13 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> Cryonite = List.of(OreConfiguration.target(new BlockMatchTest(ModBlocks.LIGHT_BLUE_STONE), ModBlocks.CRYONITE_ORE.defaultBlockState()));
 
         register(context, CRYONITE_ORE_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_COAL_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_COPPER_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_DIAMOND_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_EMERALD_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_GOLD_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_IRON_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        register(context, FROZEN_REDSTONE_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
 
     }
 
