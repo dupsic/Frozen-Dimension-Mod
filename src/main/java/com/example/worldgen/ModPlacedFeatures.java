@@ -31,6 +31,9 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> FROZEN_EMERALD_PLACED_KEY = registerKey("frozen_emerald");
     public static final ResourceKey<PlacedFeature> FROZEN_LAPIS_PLACED_KEY = registerKey("frozen_lapis");
     public static final ResourceKey<PlacedFeature> FROZEN_BERRIES_PLACED_KEY = registerKey("frozen_berries");
+    public static final ResourceKey<PlacedFeature> ICEBLOOM_FLOWER_PLACED_KEY = registerKey("icebloom_flower");
+    public static final ResourceKey<PlacedFeature> MAGIC_FLOWER_PLACED_KEY = registerKey("magic_flower");
+    public static final ResourceKey<PlacedFeature> WASTELAND_FLOWER_PLACED_KEY = registerKey("wasteland_flower");
 
     public static final ResourceKey<PlacedFeature> RARE_ICE_SPIKE = ResourceKey.create(
                     Registries.PLACED_FEATURE,
@@ -44,11 +47,18 @@ public class ModPlacedFeatures {
                         ModBlocks.ICEBLOOM_SAPLING));
 
         register(context, RARE_ICEBLOOM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_KEY),
-                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(8),
-                        ModBlocks.ICEBLOOM_SAPLING
-                ));
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(8), ModBlocks.ICEBLOOM_SAPLING));
 
         register(context, FROZEN_BERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_BERRIES_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+        register(context, ICEBLOOM_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_FLOWER_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+        register(context, MAGIC_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAGIC_FLOWER_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(8), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+        register(context, WASTELAND_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WASTELAND_FLOWER_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
         register(context, CRYONITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYONITE_ORE_KEY),

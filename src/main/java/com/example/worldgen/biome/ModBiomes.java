@@ -68,6 +68,16 @@ public class ModBiomes {
 
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
                 ModPlacedFeatures.FROZEN_BERRIES_PLACED_KEY);
+
+        // flowers
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_FLOWER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.WASTELAND_FLOWER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.MAGIC_FLOWER_PLACED_KEY);
+
+
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
         BiomeSpecialEffects effects =
@@ -96,8 +106,6 @@ public class ModBiomes {
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
         // ores
-        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
@@ -203,8 +211,6 @@ public class ModBiomes {
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
         // ores
-        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,

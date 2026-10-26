@@ -27,7 +27,10 @@
     [],
     [
       "frozen-dimention:icebloom_placed",
-      "frozen-dimention:frozen_berries"
+      "frozen-dimention:frozen_berries",
+      "frozen-dimention:icebloom_flower",
+      "frozen-dimention:wasteland_flower",
+      "frozen-dimention:magic_flower"
     ]
   ],
   "has_precipitation": true,

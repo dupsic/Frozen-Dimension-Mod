@@ -22,11 +22,6 @@
       "frozen-dimention:frozen_redstone",
       "frozen-dimention:frozen_diamond",
       "frozen-dimention:frozen_emerald"
-    ],
-    [],
-    [],
-    [
-      "frozen-dimention:icebloom_placed"
     ]
   ],
   "has_precipitation": true,
