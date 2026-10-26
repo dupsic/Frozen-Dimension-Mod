@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "frozen-dimention:block/frozen_grass_flower"
+  }
+}

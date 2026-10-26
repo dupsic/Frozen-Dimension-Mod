@@ -45,6 +45,7 @@ public class ModCreativeModeTab {
                         output.accept(ModBlocks.ICEBLOOM_FLOWER);
                         output.accept(ModBlocks.MAGIC_FLOWER);
                         output.accept(ModBlocks.WASTELAND_FLOWER);
+                        output.accept(ModBlocks.FROZEN_GRASS_FLOWER);
 
                         output.accept(ModItems.RAW_CRYONITE);
                         output.accept(ModItems.FROZEN_BERRIES);

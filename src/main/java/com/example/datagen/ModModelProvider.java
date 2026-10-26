@@ -45,6 +45,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.ICEBLOOM_FLOWER,ModBlocks.POTTED_ICEBLOOM_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.MAGIC_FLOWER,ModBlocks.POTTED_MAGIC_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.WASTELAND_FLOWER,ModBlocks.POTTED_WASTELAND_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createCrossBlock(ModBlocks.FROZEN_GRASS_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
 
         blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_PORTAL);
 

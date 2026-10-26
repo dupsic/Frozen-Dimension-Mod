@@ -46,6 +46,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ICEBLOOM_FLOWER_KEY = registerKey("icebloom_flower");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAGIC_FLOWER_KEY = registerKey("magic_flower");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WASTELAND_FLOWER_KEY = registerKey("wasteland_flower");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_GRASS_KEY = registerKey("frozen_grass");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -96,6 +97,15 @@ public class ModConfiguredFeatures {
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WASTELAND_FLOWER
                                 .defaultBlockState())),
                         CountPlacement.of(8),
+                        RandomOffsetPlacement.ofTriangle(6,3),
+                        BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)))));
+
+        register(context, FROZEN_GRASS_KEY, Feature.SIMPLE_RANDOM_SELECTOR,
+                new CompositeFeatureConfiguration(HolderSet.direct(PlacementUtils.inlinePlaced(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SHORT_GRASS
+                                .defaultBlockState())),
+                        CountPlacement.of(64),
                         RandomOffsetPlacement.ofTriangle(6,3),
                         BlockPredicateFilter.forPredicate(BlockPredicate.ONLY_IN_AIR_PREDICATE)))));
 

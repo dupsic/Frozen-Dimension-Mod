@@ -34,6 +34,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ICEBLOOM_FLOWER_PLACED_KEY = registerKey("icebloom_flower");
     public static final ResourceKey<PlacedFeature> MAGIC_FLOWER_PLACED_KEY = registerKey("magic_flower");
     public static final ResourceKey<PlacedFeature> WASTELAND_FLOWER_PLACED_KEY = registerKey("wasteland_flower");
+    public static final ResourceKey<PlacedFeature> FROZEN_GRASS_PLACED_KEY = registerKey("frozen_grass");
 
     public static final ResourceKey<PlacedFeature> RARE_ICE_SPIKE = ResourceKey.create(
                     Registries.PLACED_FEATURE,
@@ -61,9 +62,12 @@ public class ModPlacedFeatures {
         register(context, WASTELAND_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WASTELAND_FLOWER_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
+        register(context, FROZEN_GRASS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_GRASS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(8), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
         register(context, CRYONITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYONITE_ORE_KEY),
                 List.of(
-                        CountPlacement.of(8),
+                        CountPlacement.of(16),
                         InSquarePlacement.spread(),
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(32)),
                         BiomeFilter.biome()
@@ -126,7 +130,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(480)
                 ));
 
-     registerOre(context, FROZEN_LAPIS_PLACED_KEY,
+        registerOre(context, FROZEN_LAPIS_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_LAPIS_KEY),
                 100,
                 HeightRangePlacement.triangle(
@@ -134,18 +138,15 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(15)
                 ));
 
-        context.register(
-                RARE_ICE_SPIKE,
-                new PlacedFeature(
-                        configuredFeatures.getOrThrow(MiscOverworldFeatures.ICE_SPIKE),
+        register(context, RARE_ICE_SPIKE, configuredFeatures.getOrThrow(MiscOverworldFeatures.ICE_SPIKE),
                         List.of(
                                 RarityFilter.onAverageOnceEvery(16),
                                 InSquarePlacement.spread(),
                                 HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING),
                                 BiomeFilter.biome()
                         )
-                )
-        );
+                );
+
     }
 
 

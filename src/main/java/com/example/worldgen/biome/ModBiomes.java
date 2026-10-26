@@ -123,6 +123,13 @@ public class ModBiomes {
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
 
+        // flowers
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_FLOWER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.WASTELAND_FLOWER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.FROZEN_GRASS_PLACED_KEY);
 
 
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,

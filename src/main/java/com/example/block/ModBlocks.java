@@ -155,6 +155,10 @@ public class ModBlocks {
             properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
                     properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).lightLevel(statex -> 9).pushReaction(PushReaction.DESTROY)));
 
+    public static final Block FROZEN_GRASS_FLOWER = registerBlock("frozen_grass_flower",
+            properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
+                    properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+
     public static final Block POTTED_MAGIC_FLOWER = registerBlockWithoutBlockItem("potted_magic_flower",
             properties -> new FlowerPotBlock(MAGIC_FLOWER,
                     properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
