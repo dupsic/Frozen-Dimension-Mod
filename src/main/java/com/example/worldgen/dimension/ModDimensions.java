@@ -99,8 +99,8 @@ public class ModDimensions {
                                 Climate.parameters(
                                         Climate.Parameter.span(-1.0F, 1.0F),
                                         Climate.Parameter.span(-1.0F, 1.0F),
-                                        Climate.Parameter.span(0.1F, 1.0F),
-                                        Climate.Parameter.span(0.4F, 1.0F),
+                                        Climate.Parameter.span(0.2F, 0.6F),
+                                        Climate.Parameter.span(0.5F, 1.0F),
                                         Climate.Parameter.point(0.0F),
                                         Climate.Parameter.span(-1.0F, 1.0F),
                                         0.0F

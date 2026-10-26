@@ -26,7 +26,8 @@
     [],
     [],
     [
-      "frozen-dimention:icebloom_placed"
+      "frozen-dimention:icebloom_placed",
+      "frozen-dimention:frozen_berries"
     ]
   ],
   "has_precipitation": true,

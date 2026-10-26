@@ -20,15 +20,17 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> ICEBLOOM_PLACED_KEY = registerKey("icebloom_placed");
+    public static final ResourceKey<PlacedFeature> RARE_ICEBLOOM_TREE_PLACED_KEY = registerKey("rare_icebloom_tree");
     public static final ResourceKey<PlacedFeature> CRYONITE_ORE_PLACED_KEY = registerKey("cryonite_ore_placed");
-    public static final ResourceKey<PlacedFeature> FROZEN_COAL_KEY = registerKey("frozen_coal");
-    public static final ResourceKey<PlacedFeature> FROZEN_IRON_KEY = registerKey("frozen_iron");
-    public static final ResourceKey<PlacedFeature> FROZEN_COPPER_KEY = registerKey("frozen_copper");
-    public static final ResourceKey<PlacedFeature> FROZEN_GOLD_KEY = registerKey("frozen_gold");
-    public static final ResourceKey<PlacedFeature> FROZEN_REDSTONE_KEY = registerKey("frozen_redstone");
-    public static final ResourceKey<PlacedFeature> FROZEN_DIAMOND_KEY = registerKey("frozen_diamond");
-    public static final ResourceKey<PlacedFeature> FROZEN_EMERALD_KEY = registerKey("frozen_emerald");
-    public static final ResourceKey<PlacedFeature> FROZEN_LAPIS_KEY = registerKey("frozen_lapis");
+    public static final ResourceKey<PlacedFeature> FROZEN_COAL_PLACED_KEY = registerKey("frozen_coal");
+    public static final ResourceKey<PlacedFeature> FROZEN_IRON_PLACED_KEY = registerKey("frozen_iron");
+    public static final ResourceKey<PlacedFeature> FROZEN_COPPER_PLACED_KEY = registerKey("frozen_copper");
+    public static final ResourceKey<PlacedFeature> FROZEN_GOLD_PLACED_KEY = registerKey("frozen_gold");
+    public static final ResourceKey<PlacedFeature> FROZEN_REDSTONE_PLACED_KEY = registerKey("frozen_redstone");
+    public static final ResourceKey<PlacedFeature> FROZEN_DIAMOND_PLACED_KEY = registerKey("frozen_diamond");
+    public static final ResourceKey<PlacedFeature> FROZEN_EMERALD_PLACED_KEY = registerKey("frozen_emerald");
+    public static final ResourceKey<PlacedFeature> FROZEN_LAPIS_PLACED_KEY = registerKey("frozen_lapis");
+    public static final ResourceKey<PlacedFeature> FROZEN_BERRIES_PLACED_KEY = registerKey("frozen_berries");
 
     public static final ResourceKey<PlacedFeature> RARE_ICE_SPIKE = ResourceKey.create(
                     Registries.PLACED_FEATURE,
@@ -41,6 +43,13 @@ public class ModPlacedFeatures {
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.ICEBLOOM_SAPLING));
 
+        register(context, RARE_ICEBLOOM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_KEY),
+                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(8),
+                        ModBlocks.ICEBLOOM_SAPLING
+                ));
+
+        register(context, FROZEN_BERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_BERRIES_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
         register(context, CRYONITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CRYONITE_ORE_KEY),
                 List.of(
@@ -51,7 +60,7 @@ public class ModPlacedFeatures {
                 )
         );
 
-        registerOre(context, FROZEN_COAL_KEY,
+        registerOre(context, FROZEN_COAL_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_COAL_KEY),
                 20,
                 HeightRangePlacement.uniform(
@@ -59,7 +68,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(192)
                 ));
 
-        registerOre(context, FROZEN_IRON_KEY,
+        registerOre(context, FROZEN_IRON_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_IRON_KEY),
                 10,
                 HeightRangePlacement.triangle(
@@ -67,7 +76,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(56)
                 ));
 
-        registerOre(context, FROZEN_COPPER_KEY,
+        registerOre(context, FROZEN_COPPER_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_COPPER_KEY),
                 16,
                 HeightRangePlacement.triangle(
@@ -75,7 +84,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(112)
                 ));
 
-        registerOre(context, FROZEN_GOLD_KEY,
+        registerOre(context, FROZEN_GOLD_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_GOLD_KEY),
                 4,
                 HeightRangePlacement.triangle(
@@ -83,7 +92,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(32)
                 ));
 
-        registerOre(context, FROZEN_REDSTONE_KEY,
+        registerOre(context, FROZEN_REDSTONE_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_REDSTONE_KEY),
                 4,
                 HeightRangePlacement.uniform(
@@ -91,7 +100,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(15)
                 ));
 
-        registerOre(context, FROZEN_DIAMOND_KEY,
+        registerOre(context, FROZEN_DIAMOND_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_DIAMOND_KEY),
                 7,
                 HeightRangePlacement.triangle(
@@ -99,7 +108,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(80)
                 ));
 
-        registerOre(context, FROZEN_EMERALD_KEY,
+        registerOre(context, FROZEN_EMERALD_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_EMERALD_KEY),
                 100,
                 HeightRangePlacement.triangle(
@@ -107,7 +116,7 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(480)
                 ));
 
-     registerOre(context, FROZEN_LAPIS_KEY,
+     registerOre(context, FROZEN_LAPIS_PLACED_KEY,
                 configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_LAPIS_KEY),
                 100,
                 HeightRangePlacement.triangle(
@@ -120,7 +129,7 @@ public class ModPlacedFeatures {
                 new PlacedFeature(
                         configuredFeatures.getOrThrow(MiscOverworldFeatures.ICE_SPIKE),
                         List.of(
-                                RarityFilter.onAverageOnceEvery(5),
+                                RarityFilter.onAverageOnceEvery(16),
                                 InSquarePlacement.spread(),
                                 HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING),
                                 BiomeFilter.biome()

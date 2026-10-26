@@ -36,12 +36,12 @@
           "biome": "frozen-dimention:frozen_wasteland",
           "parameters": {
             "continentalness": [
-              0.1,
-              1.0
+              0.2,
+              0.6
             ],
             "depth": 0.0,
             "erosion": [
-              0.4,
+              0.5,
               1.0
             ],
             "humidity": [

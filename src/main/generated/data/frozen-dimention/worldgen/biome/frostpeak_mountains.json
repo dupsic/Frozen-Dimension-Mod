@@ -16,7 +16,19 @@
     ],
     [],
     [
-      "frozen-dimention:cryonite_ore_placed"
+      "frozen-dimention:cryonite_ore_placed",
+      "frozen-dimention:frozen_coal",
+      "frozen-dimention:frozen_iron",
+      "frozen-dimention:frozen_copper",
+      "frozen-dimention:frozen_gold",
+      "frozen-dimention:frozen_redstone",
+      "frozen-dimention:frozen_diamond",
+      "frozen-dimention:frozen_emerald"
+    ],
+    [],
+    [],
+    [
+      "frozen-dimention:icebloom_placed"
     ]
   ],
   "has_precipitation": true,

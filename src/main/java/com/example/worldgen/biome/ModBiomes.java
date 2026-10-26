@@ -49,31 +49,25 @@ public class ModBiomes {
 
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
                 ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
-
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
-
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_COAL_KEY);
-
+                ModPlacedFeatures.FROZEN_COAL_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_IRON_KEY);
-
+                ModPlacedFeatures.FROZEN_IRON_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_COPPER_KEY);
-
+                ModPlacedFeatures.FROZEN_COPPER_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_GOLD_KEY);
-
+                ModPlacedFeatures.FROZEN_GOLD_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_REDSTONE_KEY);
-
+                ModPlacedFeatures.FROZEN_REDSTONE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_DIAMOND_KEY);
-
+                ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.FROZEN_EMERALD_KEY);
+                ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
 
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.FROZEN_BERRIES_PLACED_KEY);
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
         BiomeSpecialEffects effects =
@@ -101,8 +95,30 @@ public class ModBiomes {
 
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
-        // cryonite ores
-        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+        // ores
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COAL_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_IRON_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COPPER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_GOLD_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_REDSTONE_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
+
+
+
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.RARE_ICEBLOOM_TREE_PLACED_KEY);
 
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
@@ -131,13 +147,34 @@ public class ModBiomes {
 
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
-        // cryonite ores
-        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+        // ores
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COAL_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_IRON_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COPPER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_GOLD_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_REDSTONE_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
+
+
 
         generation.addFeature(
                 GenerationStep.Decoration.SURFACE_STRUCTURES,
                 ModPlacedFeatures.RARE_ICE_SPIKE
         );
+
+
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
@@ -165,8 +202,25 @@ public class ModBiomes {
 
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
-        // cryonite ores
-        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+        // ores
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COAL_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_IRON_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COPPER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_GOLD_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_REDSTONE_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
 
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
