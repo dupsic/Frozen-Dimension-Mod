@@ -3,8 +3,8 @@
   "category": "blocks",
   "experience": 0.25,
   "group": "cryonite",
-  "ingredient": "frozen-dimention:cryonite_ore",
+  "ingredient": "frozen-dimention:frozen_iron_ore",
   "result": {
-    "id": "frozen-dimention:cryonite_ingot"
+    "id": "minecraft:iron_ingot"
   }
 }

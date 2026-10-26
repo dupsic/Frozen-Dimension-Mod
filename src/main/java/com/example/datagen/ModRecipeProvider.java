@@ -27,13 +27,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(registries, output) {
             @Override
             public void buildRecipes() {
-                List<ItemLike> CRYONITE_SMELTABLES = List.of(ModItems.RAW_CRYONITE, ModBlocks.CRYONITE_ORE);
-                List<ItemLike> CRYONITE_DIRT_SMELTABLES = List.of(ModBlocks.FROZEN_DIRT, ModBlocks.FROZEN_GRASS);
-                List<ItemLike> CRYONITE_STONE_SMELTABLES = List.of(ModBlocks.DARK_BLUE_STONE, ModBlocks.LIGHT_BLUE_STONE);
 
 
-                oreSmelting(CRYONITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CRYONITE_INGOT, 0.25F, 200, "cryonite" );
-                oreBlasting(CRYONITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CRYONITE_INGOT, 0.25F, 100, "cryonite" );
+                oreSmelting(List.of(ModItems.RAW_CRYONITE), RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CRYONITE_INGOT, 0.25F, 200, "cryonite" );
+                oreBlasting(List.of(ModItems.RAW_CRYONITE), RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CRYONITE_INGOT, 0.25F, 100, "cryonite" );
 
                 oreSmelting(List.of(ModBlocks.FROZEN_COAL_ORE), RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.FROZEN_COAL, 0.25F, 200, "cryonite" );
                 oreBlasting(List.of(ModBlocks.FROZEN_COAL_ORE), RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.FROZEN_COAL, 0.25F, 100, "cryonite" );
@@ -64,11 +61,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
 
-                oreSmelting(CRYONITE_DIRT_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.DIRT, 0.25f, 200, "frozen");
-                oreBlasting(CRYONITE_DIRT_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.DIRT, 0.25f, 100, "frozen");
+                oreSmelting(List.of(ModBlocks.FROZEN_DIRT), RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.DIRT, 0.25f, 200, "frozen");
+                oreBlasting(List.of(ModBlocks.FROZEN_DIRT), RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.DIRT, 0.25f, 100, "frozen");
 
-                oreSmelting(CRYONITE_STONE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.STONE, 0.25f, 200, "frozen");
-                oreBlasting(CRYONITE_STONE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.STONE, 0.25f, 100, "frozen");
+                oreSmelting(List.of(ModBlocks.LIGHT_BLUE_STONE), RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.STONE, 0.25f, 200, "frozen");
+                oreBlasting(List.of(ModBlocks.LIGHT_BLUE_STONE), RecipeCategory.MISC, CookingBookCategory.BLOCKS, Blocks.STONE, 0.25f, 100, "frozen");
 
                 shaped(RecipeCategory.TOOLS, ModItems.CRYONITE_PICKAXE)
                         .pattern("CCC")

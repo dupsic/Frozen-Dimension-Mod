@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dark_blue_stone": {
+    "has_frozen_copper_ore": {
       "conditions": {
         "items": [
           {
-            "items": "frozen-dimention:dark_blue_stone"
+            "items": "frozen-dimention:frozen_copper_ore"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "frozen-dimention:stone_from_blasting_dark_blue_stone"
+        "recipe": "frozen-dimention:copper_ingot_from_blasting_frozen_copper_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_dark_blue_stone"
+      "has_frozen_copper_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "frozen-dimention:stone_from_blasting_dark_blue_stone"
+      "frozen-dimention:copper_ingot_from_blasting_frozen_copper_ore"
     ]
   }
 }

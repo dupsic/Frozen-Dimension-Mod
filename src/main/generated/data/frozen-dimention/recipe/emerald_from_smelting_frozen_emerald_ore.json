@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.25,
+  "group": "cryonite",
+  "ingredient": "frozen-dimention:frozen_emerald_ore",
+  "result": {
+    "id": "minecraft:emerald"
+  }
+}

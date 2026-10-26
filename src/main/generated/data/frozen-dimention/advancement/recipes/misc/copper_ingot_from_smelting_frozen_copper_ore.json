@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cryonite_ore": {
+    "has_frozen_copper_ore": {
       "conditions": {
         "items": [
           {
-            "items": "frozen-dimention:cryonite_ore"
+            "items": "frozen-dimention:frozen_copper_ore"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "frozen-dimention:cryonite_ingot_from_smelting_cryonite_ore"
+        "recipe": "frozen-dimention:copper_ingot_from_smelting_frozen_copper_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cryonite_ore"
+      "has_frozen_copper_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "frozen-dimention:cryonite_ingot_from_smelting_cryonite_ore"
+      "frozen-dimention:copper_ingot_from_smelting_frozen_copper_ore"
     ]
   }
 }

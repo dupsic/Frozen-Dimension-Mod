@@ -6,8 +6,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.debugchart.RemoteDebugSampleType;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -32,8 +34,9 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_DIAMOND_KEY = registerKey("frozen_diamond");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_GOLD_KEY = registerKey("frozen_gold");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_EMERALD_KEY = registerKey("frozen_emerald");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_REDSTONE_KEY = registerKey("frozen_restone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_REDSTONE_KEY = registerKey("frozen_redstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_COPPER_KEY = registerKey("frozen_copper");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_LAPIS_KEY = registerKey("frozen_lapis");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -52,16 +55,16 @@ public class ModConfiguredFeatures {
 
 
 
-        List<OreConfiguration.TargetBlockState> Cryonite = List.of(OreConfiguration.target(new BlockMatchTest(ModBlocks.LIGHT_BLUE_STONE), ModBlocks.CRYONITE_ORE.defaultBlockState()));
 
-        register(context, CRYONITE_ORE_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_COAL_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_COPPER_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_DIAMOND_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_EMERALD_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_GOLD_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_IRON_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
-        register(context, FROZEN_REDSTONE_KEY, Feature.ORE, new OreConfiguration(Cryonite, 7));
+        registerOre(context, CRYONITE_ORE_KEY, ModBlocks.CRYONITE_ORE, 7);
+        registerOre(context, FROZEN_COAL_KEY, ModBlocks.FROZEN_COAL_ORE, 17);
+        registerOre(context, FROZEN_IRON_KEY, ModBlocks.FROZEN_IRON_ORE, 10);
+        registerOre(context, FROZEN_DIAMOND_KEY, ModBlocks.FROZEN_DIAMOND_ORE, 4);
+        registerOre(context, FROZEN_GOLD_KEY, ModBlocks.FROZEN_GOLD_ORE, 3);
+        registerOre(context, FROZEN_EMERALD_KEY, ModBlocks.FROZEN_EMERALD_ORE, 9);
+        registerOre(context, FROZEN_REDSTONE_KEY, ModBlocks.FROZEN_REDSTONE_ORE, 9);
+        registerOre(context, FROZEN_COPPER_KEY, ModBlocks.FROZEN_COPPER_ORE, 8);
+        registerOre(context, FROZEN_LAPIS_KEY, ModBlocks.FROZEN_LAPIS_ORE, 7);
 
     }
 
@@ -69,6 +72,22 @@ public class ModConfiguredFeatures {
 
     private static ResourceKey<ConfiguredFeature<?,?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name));
+    }
+
+    private static void registerOre(
+            BootstrapContext<ConfiguredFeature<?, ?>> context,
+            ResourceKey<ConfiguredFeature<?, ?>> key,
+            Block oreBlock,
+            int veinSize
+    ) {
+        List<OreConfiguration.TargetBlockState> targets = List.of(
+                OreConfiguration.target(
+                        new BlockMatchTest(ModBlocks.LIGHT_BLUE_STONE),
+                        oreBlock.defaultBlockState()
+                )
+        );
+
+        register(context, key, Feature.ORE, new OreConfiguration(targets, veinSize));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
