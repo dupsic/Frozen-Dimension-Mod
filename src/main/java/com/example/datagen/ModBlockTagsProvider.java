@@ -76,7 +76,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_LEAVES));
 
         tag(BlockTags.FLOWER_POTS)
-                .add(ModBlocks.getRK(ModBlocks.POTTED_ICEBLOOM_SAPLING));
+                .add(ModBlocks.getRK(ModBlocks.POTTED_ICEBLOOM_SAPLING))
+                .add(ModBlocks.getRK(ModBlocks.POTTED_ICEBLOOM_FLOWER))
+                .add(ModBlocks.getRK(ModBlocks.POTTED_MAGIC_FLOWER))
+                .add(ModBlocks.getRK(ModBlocks.POTTED_WASTELAND_FLOWER));
 
         tag(BlockTags.SUPPORTS_VEGETATION)
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_DIRT))

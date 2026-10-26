@@ -1,5 +1,8 @@
 {
   "values": [
-    "frozen-dimention:potted_icebloom_sapling"
+    "frozen-dimention:potted_icebloom_sapling",
+    "frozen-dimention:potted_icebloom_flower",
+    "frozen-dimention:potted_magic_flower",
+    "frozen-dimention:potted_wasteland_flower"
   ]
 }

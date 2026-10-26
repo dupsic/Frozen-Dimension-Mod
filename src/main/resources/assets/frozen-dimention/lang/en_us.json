@@ -40,5 +40,8 @@
   "block.frozen-dimention.icebloom_sapling": "Icebloom Sapling",
   "block.frozen-dimention.potted_icebloom_sapling": "Potted_Icebloom Sapling",
 
-  "block.frozen-dimention.frozen_portal": "Frozen Portal Block"
+  "block.frozen-dimention.frozen_portal": "Frozen Portal Block",
+  "block.frozen-dimention.icebloom_flower": "Icebloom Flower",
+  "block.frozen-dimention.wasteland_flower": "Wasteland Flower",
+  "block.frozen-dimention.magic_flower": "Magic Flower"
 }

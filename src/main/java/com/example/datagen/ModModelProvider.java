@@ -42,6 +42,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialBlock(ModBlocks.ICEBLOOM_LEAVES, TexturedModel.LEAVES);
 
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.ICEBLOOM_SAPLING,ModBlocks.POTTED_ICEBLOOM_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(ModBlocks.ICEBLOOM_FLOWER,ModBlocks.POTTED_ICEBLOOM_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(ModBlocks.MAGIC_FLOWER,ModBlocks.POTTED_MAGIC_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(ModBlocks.WASTELAND_FLOWER,ModBlocks.POTTED_WASTELAND_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
 
         blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_PORTAL);
 
@@ -61,6 +64,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.CRYONITE_HOE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.createFlatItemModel(ModItems.CRYONITE_BOW, ModelTemplates.BOW);
         itemModelGenerators.generateBow(ModItems.CRYONITE_BOW);
+
 
     }
 }

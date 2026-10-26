@@ -13,8 +13,10 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -131,6 +133,30 @@ public class ModBlocks {
 
     public static final Block POTTED_ICEBLOOM_SAPLING = registerBlockWithoutBlockItem("potted_icebloom_sapling",
             properties -> new FlowerPotBlock(ICEBLOOM_SAPLING,
+                    properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    public static final Block ICEBLOOM_FLOWER = registerBlock("icebloom_flower",
+            properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
+                    properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+
+    public static final Block POTTED_ICEBLOOM_FLOWER = registerBlockWithoutBlockItem("potted_icebloom_flower",
+            properties -> new FlowerPotBlock(ICEBLOOM_FLOWER,
+                    properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    public static final Block WASTELAND_FLOWER = registerBlock("wasteland_flower",
+            properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
+                    properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+
+    public static final Block POTTED_WASTELAND_FLOWER = registerBlockWithoutBlockItem("potted_wasteland_flower",
+            properties -> new FlowerPotBlock(WASTELAND_FLOWER,
+                    properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
+    public static final Block MAGIC_FLOWER = registerBlock("magic_flower",
+            properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
+                    properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+
+    public static final Block POTTED_MAGIC_FLOWER = registerBlockWithoutBlockItem("potted_magic_flower",
+            properties -> new FlowerPotBlock(MAGIC_FLOWER,
                     properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
