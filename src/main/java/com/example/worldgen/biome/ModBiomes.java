@@ -19,40 +19,61 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> FROZEN_FOREST = ResourceKey.create(
-                    Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID,"frozen_forest"));
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_forest"));
 
+    public static final ResourceKey<Biome> FROZEN_WASTELAND = ResourceKey.create(
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_wasteland"));
 
+    public static final ResourceKey<Biome> FROSTPEAK_MOUNTAINS = ResourceKey.create(
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frostpeak_mountains"));
+
+    public static final ResourceKey<Biome> FROZEN_MARSH = ResourceKey.create(
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_marsh"));
 
     public static void bootstrap(BootstrapContext<Biome> context) {
         context.register(FROZEN_FOREST, frozenForest(context));
+        context.register(FROZEN_WASTELAND, frozenWasteland(context));
+        context.register(FROSTPEAK_MOUNTAINS, frostpeakMountains(context));
+        context.register(FROZEN_MARSH, frozenMarsh(context));
     }
 
     private static Biome frozenForest(BootstrapContext<Biome> context) {
 
-        HolderGetter<PlacedFeature> features =
-                context.lookup(Registries.PLACED_FEATURE);
+        HolderGetter<PlacedFeature> features = context.lookup(Registries.PLACED_FEATURE);
 
-        HolderGetter<ConfiguredWorldCarver<?>> carvers =
-                context.lookup(Registries.CONFIGURED_CARVER);
+        HolderGetter<ConfiguredWorldCarver<?>> carvers = context.lookup(Registries.CONFIGURED_CARVER);
 
-        BiomeGenerationSettings.Builder generation =
-                new BiomeGenerationSettings.Builder(features, carvers);
+        BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
 
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
 
-        BiomeDefaultFeatures.addDefaultOres(generation);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
 
-        generation.addFeature(
-                GenerationStep.Decoration.UNDERGROUND_ORES,
-                ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY
-        );
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COAL_KEY);
 
-        generation.addFeature(
-                net.minecraft.world.level.levelgen.GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ICEBLOOM_PLACED_KEY
-        );
-        MobSpawnSettings.Builder spawns =
-                new MobSpawnSettings.Builder();
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_IRON_KEY);
+
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_COPPER_KEY);
+
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_GOLD_KEY);
+
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_REDSTONE_KEY);
+
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_DIAMOND_KEY);
+
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_EMERALD_KEY);
+
+        MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
         BiomeSpecialEffects effects =
                 new BiomeSpecialEffects.Builder()
@@ -69,5 +90,95 @@ public class ModBiomes {
                 .mobSpawnSettings(spawns.build())
                 .generationSettings(generation.build())
                 .build();
+    }
+
+    private static Biome frozenWasteland(BootstrapContext<Biome> context) {
+
+        HolderGetter<PlacedFeature> features = context.lookup(Registries.PLACED_FEATURE);
+
+        HolderGetter<ConfiguredWorldCarver<?>> carvers = context.lookup(Registries.CONFIGURED_CARVER);
+
+        BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
+
+        // cryonite ores
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+
+        MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+
+        BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
+                        .waterColor(0x4ABBD9)
+                        .foliageColorOverride(0xA0E8F5)
+                        .grassColorOverride(0xC5F4FF)
+                        .build();
+
+        return new Biome.BiomeBuilder()
+                .temperature(-0.9F)
+                .downfall(0.5F)
+                .hasPrecipitation(true)
+                .specialEffects(effects)
+                .mobSpawnSettings(spawns.build())
+                .generationSettings(generation.build())
+                .build();
+
+    }
+
+    private static Biome frostpeakMountains(BootstrapContext<Biome> context) {
+
+        HolderGetter<PlacedFeature> features = context.lookup(Registries.PLACED_FEATURE);
+
+        HolderGetter<ConfiguredWorldCarver<?>> carvers = context.lookup(Registries.CONFIGURED_CARVER);
+
+        BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
+
+        // cryonite ores
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+
+        MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+
+        BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
+                        .waterColor(0x4ABBD9)
+                        .foliageColorOverride(0xA0E8F5)
+                        .grassColorOverride(0xC5F4FF)
+                        .build();
+
+        return new Biome.BiomeBuilder()
+                .temperature(-0.9F)
+                .downfall(0.5F)
+                .hasPrecipitation(true)
+                .specialEffects(effects)
+                .mobSpawnSettings(spawns.build())
+                .generationSettings(generation.build())
+                .build();
+
+    }
+
+    private static Biome frozenMarsh(BootstrapContext<Biome> context) {
+
+        HolderGetter<PlacedFeature> features = context.lookup(Registries.PLACED_FEATURE);
+
+        HolderGetter<ConfiguredWorldCarver<?>> carvers = context.lookup(Registries.CONFIGURED_CARVER);
+
+        BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
+
+        // cryonite ores
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
+
+        MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+
+        BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
+                        .waterColor(0x4ABBD9)
+                        .foliageColorOverride(0xA0E8F5)
+                        .grassColorOverride(0xC5F4FF)
+                        .build();
+
+        return new Biome.BiomeBuilder()
+                .temperature(-0.9F)
+                .downfall(0.5F)
+                .hasPrecipitation(true)
+                .specialEffects(effects)
+                .mobSpawnSettings(spawns.build())
+                .generationSettings(generation.build())
+                .build();
+
     }
 }

@@ -26,6 +26,7 @@ public class ModNoiseSettings {
         var densityFunctions = context.lookup(Registries.DENSITY_FUNCTION);
         var noises = context.lookup(Registries.NOISE);
         var noiseRouter = NoiseRouterData.overworld(densityFunctions, noises, true, false);
+        var biomes = context.lookup(Registries.BIOME);
 
         NoiseGeneratorSettings settings =
                 new NoiseGeneratorSettings(
@@ -33,7 +34,7 @@ public class ModNoiseSettings {
                         ModBlocks.LIGHT_BLUE_STONE.defaultBlockState(),
                         Blocks.WATER.defaultBlockState(),
                         noiseRouter,
-                        ModSurfaceRules.createRules(),
+                        ModSurfaceRules.createRules(biomes),
                         java.util.List.of(),
                         63,
                         false,

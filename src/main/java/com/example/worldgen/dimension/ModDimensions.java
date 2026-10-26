@@ -77,8 +77,33 @@ public class ModDimensions {
         HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
-        NoiseBasedChunkGenerator chunkGenerator = new NoiseBasedChunkGenerator(new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.FROZEN_FOREST)),
-                        noiseGenSettings.getOrThrow(ModNoiseSettings.FROZEN_NOISE));
+        MultiNoiseBiomeSource biomeSource = MultiNoiseBiomeSource.createFromList(
+                new Climate.ParameterList<>(List.of(
+                        Pair.of(
+                                Climate.parameters(-0.7F, 0.0F, 0F, 0F, 0F, 0F, 0F),
+                                biomeRegistry.getOrThrow(ModBiomes.FROZEN_FOREST)
+                        ),
+
+                        Pair.of(
+                                Climate.parameters(0.7F, 0.0F, 0F, 0F, 0F, 0F, 0F),
+                                biomeRegistry.getOrThrow(ModBiomes.FROZEN_WASTELAND)
+                        ),
+
+                        Pair.of(
+                                Climate.parameters(0.0F, 0.0F, 0.6F, -0.8F, 0F, 0.5F, 0F),
+                                biomeRegistry.getOrThrow(ModBiomes.FROSTPEAK_MOUNTAINS)
+                        ),
+
+                        Pair.of(
+                                Climate.parameters(0.0F, 0.0F, -0.7F, 0F, 0F, 0F, 0F),
+                                biomeRegistry.getOrThrow(ModBiomes.FROZEN_MARSH)
+                        )
+                ))
+        );
+
+
+
+        NoiseBasedChunkGenerator chunkGenerator = new NoiseBasedChunkGenerator(biomeSource, noiseGenSettings.getOrThrow(ModNoiseSettings.FROZEN_NOISE));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.FROZEN_DIM_TYPE), chunkGenerator);
 
