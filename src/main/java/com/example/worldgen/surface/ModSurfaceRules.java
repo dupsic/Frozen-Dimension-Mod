@@ -43,14 +43,8 @@ public class ModSurfaceRules {
                         SurfaceRules.ifTrue(
                                 SurfaceRules.abovePreliminarySurface(),
                                 SurfaceRules.sequence(
-                                        SurfaceRules.ifTrue(
-                                                SurfaceRules.ON_FLOOR,
-                                                SNOW
-                                        ),
-                                        SurfaceRules.ifTrue(
-                                                SurfaceRules.UNDER_FLOOR,
-                                                STONE
-                                        )
+                                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SNOW),
+                                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, STONE)
                                 )
                         )
                 ),

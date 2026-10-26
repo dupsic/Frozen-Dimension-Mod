@@ -7,6 +7,7 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.Biome;
@@ -133,6 +134,10 @@ public class ModBiomes {
         // cryonite ores
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
 
+        generation.addFeature(
+                GenerationStep.Decoration.SURFACE_STRUCTURES,
+                ModPlacedFeatures.RARE_ICE_SPIKE
+        );
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()

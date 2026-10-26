@@ -1,7 +1,7 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimention/Frozen Dimention Mod Data Provider
-be6ee9979e9df309b24c8f775ed2ca1086c20367 data/frozen-dimention/dimension/frozen.json
+0901ce9adc62fba41461eaa1711c21003685e181 data/frozen-dimention/dimension/frozen.json
 592dedf5cdeab1c4a46252910cbaf77ecde7189b data/frozen-dimention/dimension_type/frozen_type.json
-5d4a0c3f2fd2fd86d1a9c2c786c1db84f2e7391c data/frozen-dimention/worldgen/biome/frostpeak_mountains.json
+a35b90812fe8baa05dd085f919b2f1d0e4482988 data/frozen-dimention/worldgen/biome/frostpeak_mountains.json
 858764a9d644210ac7e2b24cfba2adc8a6b2a914 data/frozen-dimention/worldgen/biome/frozen_forest.json
 5d4a0c3f2fd2fd86d1a9c2c786c1db84f2e7391c data/frozen-dimention/worldgen/biome/frozen_marsh.json
 5d4a0c3f2fd2fd86d1a9c2c786c1db84f2e7391c data/frozen-dimention/worldgen/biome/frozen_wasteland.json
@@ -26,3 +26,4 @@ da59f35985a25c3ff2907a154ada7c9f23eb3f31 data/frozen-dimention/worldgen/placed_f
 77099e4a30682f5560a6c5a7a9289672a8891031 data/frozen-dimention/worldgen/placed_feature/frozen_lapis.json
 57a7c35af4b9f18e59b0e11db35da1e702fc542c data/frozen-dimention/worldgen/placed_feature/frozen_redstone.json
 2e279a3fff1be3c6b0bf4ecd77181521e9af3987 data/frozen-dimention/worldgen/placed_feature/icebloom_placed.json
+9a0b84b3067149b190d10e26091856c08d187d90 data/frozen-dimention/worldgen/placed_feature/rare_ice_spike.json

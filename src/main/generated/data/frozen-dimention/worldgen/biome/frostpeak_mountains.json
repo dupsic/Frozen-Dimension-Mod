@@ -11,7 +11,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "frozen-dimention:rare_ice_spike"
+    ],
     [],
     [
       "frozen-dimention:cryonite_ore_placed"

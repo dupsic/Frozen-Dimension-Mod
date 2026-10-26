@@ -10,18 +10,14 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
-import net.minecraft.world.level.levelgen.NoiseSettings;
-import net.minecraft.world.level.levelgen.NoiseRouterData;
-import net.minecraft.world.level.levelgen.SurfaceRules;
+import net.minecraft.world.level.levelgen.*;
 
 public class ModNoiseSettings {
 
     public static final ResourceKey<NoiseGeneratorSettings> FROZEN_NOISE =
             ResourceKey.create(Registries.NOISE_SETTINGS, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_noise"));
 
-    public static void bootstrap(
-            BootstrapContext<NoiseGeneratorSettings> context) {
+    public static void bootstrap(BootstrapContext<NoiseGeneratorSettings> context) {
 
         var densityFunctions = context.lookup(Registries.DENSITY_FUNCTION);
         var noises = context.lookup(Registries.NOISE);

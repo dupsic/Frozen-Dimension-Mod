@@ -5,10 +5,12 @@ import com.example.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.MiscOverworldFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
@@ -28,6 +30,10 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> FROZEN_EMERALD_KEY = registerKey("frozen_emerald");
     public static final ResourceKey<PlacedFeature> FROZEN_LAPIS_KEY = registerKey("frozen_lapis");
 
+    public static final ResourceKey<PlacedFeature> RARE_ICE_SPIKE = ResourceKey.create(
+                    Registries.PLACED_FEATURE,
+                    Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "rare_ice_spike")
+            );
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -109,9 +115,18 @@ public class ModPlacedFeatures {
                         VerticalAnchor.absolute(15)
                 ));
 
-
-
-
+        context.register(
+                RARE_ICE_SPIKE,
+                new PlacedFeature(
+                        configuredFeatures.getOrThrow(MiscOverworldFeatures.ICE_SPIKE),
+                        List.of(
+                                RarityFilter.onAverageOnceEvery(5),
+                                InSquarePlacement.spread(),
+                                HeightmapPlacement.onHeightmap(Heightmap.Types.MOTION_BLOCKING),
+                                BiomeFilter.biome()
+                        )
+                )
+        );
     }
 
 

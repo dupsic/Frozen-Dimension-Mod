@@ -79,23 +79,60 @@ public class ModDimensions {
 
         MultiNoiseBiomeSource biomeSource = MultiNoiseBiomeSource.createFromList(
                 new Climate.ParameterList<>(List.of(
+
+                        // Frozen Forest
                         Pair.of(
-                                Climate.parameters(-0.7F, 0.0F, 0F, 0F, 0F, 0F, 0F),
+                                Climate.parameters(
+                                        Climate.Parameter.span(-1.0F, 0.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        Climate.Parameter.span(0.1F, 0.6F),
+                                        Climate.Parameter.span(-0.3F, 0.5F),
+                                        Climate.Parameter.point(0.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        0.0F
+                                ),
                                 biomeRegistry.getOrThrow(ModBiomes.FROZEN_FOREST)
                         ),
 
+                        // Frozen Wasteland
                         Pair.of(
-                                Climate.parameters(0.7F, 0.0F, 0F, 0F, 0F, 0F, 0F),
+                                Climate.parameters(
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        Climate.Parameter.span(0.1F, 1.0F),
+                                        Climate.Parameter.span(0.4F, 1.0F),
+                                        Climate.Parameter.point(0.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        0.0F
+                                ),
                                 biomeRegistry.getOrThrow(ModBiomes.FROZEN_WASTELAND)
                         ),
 
+                        // Frostpeak Mountains
                         Pair.of(
-                                Climate.parameters(0.0F, 0.0F, 0.6F, -0.8F, 0F, 0.5F, 0F),
+                                Climate.parameters(
+                                        Climate.Parameter.span(-1.0F, 0.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        Climate.Parameter.span(0.3F, 1.0F),
+                                        Climate.Parameter.span(-1.0F, -0.4F),
+                                        Climate.Parameter.point(0.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        0.0F
+                                ),
                                 biomeRegistry.getOrThrow(ModBiomes.FROSTPEAK_MOUNTAINS)
                         ),
 
+                        // Frozen Marsh
                         Pair.of(
-                                Climate.parameters(0.0F, 0.0F, -0.7F, 0F, 0F, 0F, 0F),
+                                Climate.parameters(
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        Climate.Parameter.span(-1.0F, 0.1F),
+                                        Climate.Parameter.span(-0.2F, 1.0F),
+                                        Climate.Parameter.point(0.0F),
+                                        Climate.Parameter.span(-1.0F, 1.0F),
+                                        0.0F
+                                ),
                                 biomeRegistry.getOrThrow(ModBiomes.FROZEN_MARSH)
                         )
                 ))
