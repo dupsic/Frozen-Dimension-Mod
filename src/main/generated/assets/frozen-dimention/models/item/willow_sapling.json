@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "frozen-dimention:block/willow_sapling"
+  }
+}

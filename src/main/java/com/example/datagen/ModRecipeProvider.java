@@ -156,6 +156,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 planksFromLogs(ModBlocks.ICEBLOOM_PLANKS, ModTags.Items.ICEBLOOM_LOGS, 4);
 
+                woodFromLogs(ModBlocks.WILLOW_WOOD, ModBlocks.WILLOW_LOG);
+                woodFromLogs(ModBlocks.STRIPPED_WILLOW_WOOD, ModBlocks.STRIPPED_WILLOW_LOG);
+
+                planksFromLogs(ModBlocks.WILLOW_PLANKS, ModTags.Items.WILLOW_LOGS, 4);
+
             }
         };
     };

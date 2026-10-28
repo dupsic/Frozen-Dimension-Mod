@@ -21,18 +21,25 @@ import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
+import net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.CherryTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
 import net.minecraft.world.level.levelgen.placement.RandomOffsetPlacement;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ModConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ICEBLOOM_KEY = registerKey("icebloom");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ICEBLOOM_TREE_KEY = registerKey("icebloom_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILLOW_TREE_KEY = registerKey("willow_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CRYONITE_ORE_KEY = registerKey("cryonite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_COAL_KEY = registerKey("frozen_coal");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROZEN_IRON_KEY = registerKey("frozen_iron");
@@ -51,7 +58,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
 
-        register(context, ICEBLOOM_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+        register(context, ICEBLOOM_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.ICEBLOOM_LOG),
                     new CherryTrunkPlacer(7,2, 2, UniformInt.of(1, 2), UniformInt.of(2, 4), UniformInt.of(-4, -2), UniformInt.of(-1, 1)),
 
@@ -62,6 +69,19 @@ public class ModConfiguredFeatures {
 
                 new TwoLayersFeatureSize(1, 0, 2),
                 BlockStateProvider.simple(Blocks.DIRT)).build());
+
+        register(context, WILLOW_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.WILLOW_LOG),
+
+                new CherryTrunkPlacer(15,5, 3, UniformInt.of(1, 3), UniformInt.of(8, 12), UniformInt.of(-4, -3), UniformInt.of(-1, 0)),
+
+                BlockStateProvider.simple(ModBlocks.WILLOW_LEAVES),
+                new CherryFoliagePlacer(
+                        ConstantInt.of(3), ConstantInt.of(0),ConstantInt.of(4),0.25f,0.5f,0.25f,0.5f
+                ),
+                new TwoLayersFeatureSize(2, 0, 2),
+                BlockStateProvider.simple(Blocks.DIRT)).build());
+
 
         register(context, FROZEN_BERRIES_KEY, Feature.SIMPLE_RANDOM_SELECTOR,
                 new CompositeFeatureConfiguration(HolderSet.direct(PlacementUtils.inlinePlaced(

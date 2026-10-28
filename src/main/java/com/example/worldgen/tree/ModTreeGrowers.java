@@ -9,5 +9,10 @@ import java.util.Optional;
 public class ModTreeGrowers {
 
     public static final TreeGrower ICEBLOOM = new TreeGrower(FrozenDimention.MOD_ID + "icebloom",
-            Optional.empty(), Optional.of(ModConfiguredFeatures.ICEBLOOM_KEY), Optional.empty());
+            Optional.empty(), Optional.of(ModConfiguredFeatures.ICEBLOOM_TREE_KEY), Optional.empty());
+
+    public static final TreeGrower WILLOW = new TreeGrower(FrozenDimention.MOD_ID + "willow",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.WILLOW_TREE_KEY), Optional.empty());
+
+
 }

@@ -19,7 +19,8 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> ICEBLOOM_PLACED_KEY = registerKey("icebloom_placed");
+    public static final ResourceKey<PlacedFeature> ICEBLOOM_TREE_PLACED_KEY = registerKey("icebloom_placed");
+    public static final ResourceKey<PlacedFeature> WILLOW_TREE_PLACED_KEY = registerKey("willow_placed");
     public static final ResourceKey<PlacedFeature> RARE_ICEBLOOM_TREE_PLACED_KEY = registerKey("rare_icebloom_tree");
     public static final ResourceKey<PlacedFeature> CRYONITE_ORE_PLACED_KEY = registerKey("cryonite_ore_placed");
     public static final ResourceKey<PlacedFeature> FROZEN_COAL_PLACED_KEY = registerKey("frozen_coal");
@@ -43,11 +44,15 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, ICEBLOOM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_KEY),
+        register(context, ICEBLOOM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.ICEBLOOM_SAPLING));
 
-        register(context, RARE_ICEBLOOM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_KEY),
+        register(context, WILLOW_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WILLOW_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.WILLOW_SAPLING));
+
+        register(context, RARE_ICEBLOOM_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICEBLOOM_TREE_KEY),
                 VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(8), ModBlocks.ICEBLOOM_SAPLING));
 
         register(context, FROZEN_BERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FROZEN_BERRIES_KEY),

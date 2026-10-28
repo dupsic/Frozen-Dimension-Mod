@@ -50,6 +50,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_COAL_ORE))
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_IRON_ORE));
+
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_DIRT))
                 .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
@@ -66,17 +67,27 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
                 .add(ModBlocks.getRK(ModBlocks.STRIPPED_ICEBLOOM_WOOD))
                 .add(ModBlocks.getRK(ModBlocks.STRIPPED_ICEBLOOM_LOG));
 
+        tag(ModTags.Blocks.WILLOW_LOGS)
+                .add(ModBlocks.getRK(ModBlocks.WILLOW_LOG))
+                .add(ModBlocks.getRK(ModBlocks.WILLOW_WOOD))
+                .add(ModBlocks.getRK(ModBlocks.STRIPPED_WILLOW_WOOD))
+                .add(ModBlocks.getRK(ModBlocks.STRIPPED_WILLOW_LOG));
+
         tag(BlockTags.LOGS)
-                .addTag(ModTags.Blocks.ICEBLOOM_LOGS);
+                .addTag(ModTags.Blocks.ICEBLOOM_LOGS)
+                .addTag(ModTags.Blocks.WILLOW_LOGS);
 
         tag(BlockTags.PLANKS)
-                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_PLANKS));
+                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_PLANKS))
+                .add(ModBlocks.getRK(ModBlocks.WILLOW_PLANKS));
 
         tag(BlockTags.LEAVES)
-                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_LEAVES));
+                .add(ModBlocks.getRK(ModBlocks.ICEBLOOM_LEAVES))
+                .add(ModBlocks.getRK(ModBlocks.WILLOW_LEAVES));
 
         tag(BlockTags.FLOWER_POTS)
                 .add(ModBlocks.getRK(ModBlocks.POTTED_ICEBLOOM_SAPLING))
+                .add(ModBlocks.getRK(ModBlocks.POTTED_WILLOW_SAPLING))
                 .add(ModBlocks.getRK(ModBlocks.POTTED_ICEBLOOM_FLOWER))
                 .add(ModBlocks.getRK(ModBlocks.POTTED_MAGIC_FLOWER))
                 .add(ModBlocks.getRK(ModBlocks.POTTED_WASTELAND_FLOWER));

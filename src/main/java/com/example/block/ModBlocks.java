@@ -135,6 +135,43 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(ICEBLOOM_SAPLING,
                     properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
+
+    public static final Block WILLOW_LOG = registerBlock("willow_log",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block WILLOW_WOOD = registerBlock("willow_wood",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block STRIPPED_WILLOW_LOG = registerBlock("stripped_willow_log",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block STRIPPED_WILLOW_WOOD = registerBlock("stripped_willow_wood",
+            properties -> new RotatedPillarBlock(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
+            properties -> new Block(properties.strength(2f).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block WILLOW_LEAVES = registerBlock("willow_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.1f, ParticleTypes.SNOWFLAKE, properties.mapColor(MapColor.PLANT)
+                    .strength(0.2F)
+                    .randomTicks()
+                    .sound(SoundType.AZALEA_LEAVES)
+                    .noOcclusion()
+                    .isValidSpawn(Blocks::ocelotOrParrot)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+                    .isRedstoneConductor(Blocks::never)));
+
+    public static final Block WILLOW_SAPLING = registerBlock("willow_sapling",
+            properties -> new SaplingBlock(ModTreeGrowers.WILLOW,
+                    properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+
+    public static final Block POTTED_WILLOW_SAPLING = registerBlockWithoutBlockItem("potted_willow_sapling",
+            properties -> new FlowerPotBlock(ICEBLOOM_SAPLING,
+                    properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
     public static final Block ICEBLOOM_FLOWER = registerBlock("icebloom_flower",
             properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
                     properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
@@ -154,10 +191,6 @@ public class ModBlocks {
     public static final Block MAGIC_FLOWER = registerBlock("magic_flower",
             properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
                     properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).lightLevel(statex -> 9).pushReaction(PushReaction.DESTROY)));
-
-    public static final Block FROZEN_GRASS_FLOWER = registerBlock("frozen_grass_flower",
-            properties -> new FlowerBlock(MobEffects.SATURATION, 0.35F,
-                    properties.mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
 
     public static final Block POTTED_MAGIC_FLOWER = registerBlockWithoutBlockItem("potted_magic_flower",
             properties -> new FlowerPotBlock(MAGIC_FLOWER,

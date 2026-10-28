@@ -42,10 +42,24 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialBlock(ModBlocks.ICEBLOOM_LEAVES, TexturedModel.LEAVES);
 
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.ICEBLOOM_SAPLING,ModBlocks.POTTED_ICEBLOOM_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+
+
+
+
+        blockModelGenerators.woodProvider(ModBlocks.WILLOW_LOG).log(ModBlocks.WILLOW_LOG).wood(ModBlocks.WILLOW_WOOD);
+        blockModelGenerators.woodProvider(ModBlocks.STRIPPED_WILLOW_LOG).log(ModBlocks.STRIPPED_WILLOW_LOG).wood(ModBlocks.STRIPPED_WILLOW_WOOD);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.WILLOW_PLANKS);
+        blockModelGenerators.createTrivialBlock(ModBlocks.WILLOW_LEAVES, TexturedModel.LEAVES);
+
+        blockModelGenerators.createPlantWithDefaultItem(ModBlocks.WILLOW_SAPLING,ModBlocks.POTTED_WILLOW_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+
+
+
+
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.ICEBLOOM_FLOWER,ModBlocks.POTTED_ICEBLOOM_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.MAGIC_FLOWER,ModBlocks.POTTED_MAGIC_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.WASTELAND_FLOWER,ModBlocks.POTTED_WASTELAND_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
-        blockModelGenerators.createCrossBlock(ModBlocks.FROZEN_GRASS_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
 
         blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_PORTAL);
 

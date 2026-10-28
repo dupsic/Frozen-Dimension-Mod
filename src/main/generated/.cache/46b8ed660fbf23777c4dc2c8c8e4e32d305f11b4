@@ -1,6 +1,7 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimention/Tags for minecraft:item
 49ad6fc4540bbb7ff54734d2109eded53f937989 data/frozen-dimention/tags/item/icebloom_logs.json
-3cb633e1c5c84c9dfd977bfc63c91e0526548e3f data/minecraft/tags/item/leaves.json
-c183411268fc5117cf73510092fd21896daf2d75 data/minecraft/tags/item/logs_that_burn.json
-352818c14b696d84b9e02c0bfd3f091dd84a6138 data/minecraft/tags/item/planks.json
-850b05ac620d437daddf99d83d2da5c8ac200ac9 data/minecraft/tags/item/saplings.json
+7429e878cdffbc1571fef958eb6d94faad5746c6 data/frozen-dimention/tags/item/willow_logs.json
+d941b1fc6832740ced826c88198bf733fd70fc0c data/minecraft/tags/item/leaves.json
+0925e521c750af4ca37648cf0e435b986a88270c data/minecraft/tags/item/logs_that_burn.json
+4d5ea2dcf9ff7b6bc725422b35398f5b011c3724 data/minecraft/tags/item/planks.json
+e17f2a6098a7a9d892339840e92342d7a19e62f2 data/minecraft/tags/item/saplings.json

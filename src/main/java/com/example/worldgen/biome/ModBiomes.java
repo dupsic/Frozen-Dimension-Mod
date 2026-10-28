@@ -10,6 +10,8 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.attribute.EnvironmentAttributeMap;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.biome.BiomeSpecialEffects;
@@ -48,7 +50,7 @@ public class ModBiomes {
 
 
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
+                ModPlacedFeatures.ICEBLOOM_TREE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
@@ -164,7 +166,7 @@ public class ModBiomes {
 
         // ores
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ICEBLOOM_PLACED_KEY);
+                ModPlacedFeatures.ICEBLOOM_TREE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
@@ -217,6 +219,18 @@ public class ModBiomes {
 
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
+
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.WILLOW_TREE_PLACED_KEY);
+
+        // flowers
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.ICEBLOOM_FLOWER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.WASTELAND_FLOWER_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
+                ModPlacedFeatures.MAGIC_FLOWER_PLACED_KEY);
+
         // ores
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
@@ -235,22 +249,30 @@ public class ModBiomes {
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
 
+        EnvironmentAttributeMap marshAttributes = EnvironmentAttributeMap.builder()
+                .set(EnvironmentAttributes.FOG_COLOR, 0xFF9BB8C9)
+                .set(EnvironmentAttributes.FOG_START_DISTANCE, 32.0F)
+                .set(EnvironmentAttributes.FOG_END_DISTANCE, 128.0F)
+                .build();
+
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
 
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
-                        .waterColor(0x4ABBD9)
-                        .foliageColorOverride(0xA0E8F5)
-                        .grassColorOverride(0xC5F4FF)
-                        .build();
+                .waterColor(0x346D91)
+                .foliageColorOverride(0xA0E8F5)
+                .grassColorOverride(0xC5F4FF)
+                .build();
 
         return new Biome.BiomeBuilder()
                 .temperature(-0.9F)
                 .downfall(0.5F)
                 .hasPrecipitation(true)
                 .specialEffects(effects)
+                .putAttributes(marshAttributes)
                 .mobSpawnSettings(spawns.build())
                 .generationSettings(generation.build())
                 .build();
+
 
     }
 }

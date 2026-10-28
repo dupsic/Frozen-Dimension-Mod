@@ -1,10 +1,15 @@
 {
+  "attributes": {
+    "minecraft:visual/fog_color": "#9bb8c9",
+    "minecraft:visual/fog_end_distance": 128.0,
+    "minecraft:visual/fog_start_distance": 32.0
+  },
   "carvers": [],
   "downfall": 0.5,
   "effects": {
     "foliage_color": "#a0e8f5",
     "grass_color": "#c5f4ff",
-    "water_color": "#4abbd9"
+    "water_color": "#346d91"
   },
   "features": [
     [],
@@ -22,6 +27,14 @@
       "frozen-dimention:frozen_redstone",
       "frozen-dimention:frozen_diamond",
       "frozen-dimention:frozen_emerald"
+    ],
+    [],
+    [],
+    [
+      "frozen-dimention:willow_placed",
+      "frozen-dimention:icebloom_flower",
+      "frozen-dimention:wasteland_flower",
+      "frozen-dimention:magic_flower"
     ]
   ],
   "has_precipitation": true,

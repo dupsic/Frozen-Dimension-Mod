@@ -13,6 +13,7 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_CRYONITE_TOOL = createTag("incorrect_for_cryonite_tool");
         public static final TagKey<Block> CRYONITE_MINEABLE = createTag("cryonite_mineable");
         public static final TagKey<Block> ICEBLOOM_LOGS = createTag("icebloom_logs");
+        public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
 
         public static TagKey<Block> createTag(String name) {
             return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name));
@@ -24,6 +25,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> CRYONITE_REPAIR = createTag("cryonite_repair");
         public static final TagKey<Item> ICEBLOOM_LOGS = createTag("icebloom_logs");
+        public static final TagKey<Item> WILLOW_LOGS = createTag("willow_logs");
 
 
         public static TagKey<Item> createTag(String name) {

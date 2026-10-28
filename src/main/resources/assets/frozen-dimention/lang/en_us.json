@@ -38,11 +38,19 @@
   "block.frozen-dimention.icebloom_planks": "Icebloom Planks",
   "block.frozen-dimention.icebloom_leaves": "Icebloom Leaves",
   "block.frozen-dimention.icebloom_sapling": "Icebloom Sapling",
-  "block.frozen-dimention.potted_icebloom_sapling": "Potted_Icebloom Sapling",
+  "block.frozen-dimention.potted_icebloom_sapling": "Potted Willow Sapling",
+
+  "block.frozen-dimention.willow_log": "Willow Log",
+  "block.frozen-dimention.willow_wood": "Willow Wood",
+  "block.frozen-dimention.stripped_willow_log": "Stripped Willow Log",
+  "block.frozen-dimention.stripped_willow_wood": "Stripped Willow Wood",
+  "block.frozen-dimention.willow_planks": "Willow Planks",
+  "block.frozen-dimention.willow_leaves": "Willow Leaves",
+  "block.frozen-dimention.willow_sapling": "Willow Sapling",
+  "block.frozen-dimention.potted_willow_sapling": "Potted Willow Sapling",
 
   "block.frozen-dimention.frozen_portal": "Frozen Portal Block",
   "block.frozen-dimention.icebloom_flower": "Icebloom Flower",
   "block.frozen-dimention.wasteland_flower": "Wasteland Flower",
-  "block.frozen-dimention.magic_flower": "Magic Flower",
-  "block.frozen-dimention.frozen_grass_flower": "Frozen grass"
+  "block.frozen-dimention.magic_flower": "Magic Flower"
 }
