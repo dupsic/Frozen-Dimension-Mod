@@ -69,6 +69,9 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.CRYONITE_SHOVEL);
                         output.accept(ModItems.CRYONITE_HOE);
                         output.accept(ModItems.CRYONITE_BOW);
+
+
+                        output.accept(ModItems.FROZEN_ZOMBIE_SPAWN_EGG);
                     })
                     .build());
 

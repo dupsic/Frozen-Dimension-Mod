@@ -2,6 +2,8 @@ package com.example;
 
 import com.example.block.ModBlocks;
 import com.example.creativemodetab.ModCreativeModeTab;
+import com.example.entity.ModEntities;
+import com.example.entity.custom.FrozenZombieEntity;
 import com.example.item.ModItems;
 import com.example.registries.ModFlammableBlocks;
 import com.example.registries.ModFuels;
@@ -9,6 +11,7 @@ import com.example.registries.ModStrippedableBlocks;
 import com.example.worldgen.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.TillableBlockRegistry;
 import net.minecraft.resources.Identifier;
 
@@ -35,6 +38,9 @@ public class FrozenDimention implements ModInitializer {
 		ModStrippedableBlocks.registerStrippableBlocks();
 
 		ModWorldGeneration.generateModWorldGen();
+		ModEntities.registerModEntities();
+
+		FabricDefaultAttributeRegistry.register(ModEntities.FROZENZOMBIE, FrozenZombieEntity.createAttributes());
 		LOGGER.info("Hello Fabric world!");
 
 
@@ -52,6 +58,7 @@ public class FrozenDimention implements ModInitializer {
 				HoeItem::onlyIfAirAbove,
 				Blocks.FARMLAND.defaultBlockState()
 		);
+
 	}
 
 	public static Identifier id(String path) {

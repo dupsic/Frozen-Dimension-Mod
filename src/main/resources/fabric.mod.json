@@ -18,6 +18,9 @@
 		"main": [
 			"com.example.FrozenDimention"
 		],
+		"client": [
+			"com.example.FrozenDimentionClient"
+		],
 		"fabric-datagen": [
 			"com.example.FrozenDimentionDataGenerator"
 		]

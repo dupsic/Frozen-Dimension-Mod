@@ -2,6 +2,7 @@ package com.example.item;
 
 import com.example.FrozenDimention;
 import com.example.block.ModBlocks;
+import com.example.entity.ModEntities;
 import com.example.food.ModFoods;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -33,6 +34,8 @@ public class ModItems {
             properties -> new HoeItem(ModToolMaterials.CRYONITE, 0F, -3.0F, properties));
 
     public static final Item CRYONITE_BOW = registerItem("cryonite_bow", properties -> new BowItem(properties.durability(500)));
+
+  public static final Item FROZEN_ZOMBIE_SPAWN_EGG = registerItem("frozen_zombie_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.FROZENZOMBIE)));
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

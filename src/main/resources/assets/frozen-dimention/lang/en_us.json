@@ -52,5 +52,10 @@
   "block.frozen-dimention.frozen_portal": "Frozen Portal Block",
   "block.frozen-dimention.icebloom_flower": "Icebloom Flower",
   "block.frozen-dimention.wasteland_flower": "Wasteland Flower",
-  "block.frozen-dimention.magic_flower": "Magic Flower"
+  "block.frozen-dimention.magic_flower": "Magic Flower",
+
+
+
+  "entity.frozen-dimention.frozenzombie": "Frozen Zombie",
+  "item.frozen-dimention.frozen_zombie_spawn_egg": "Frozen Zombie Spawn Egg"
 }
