@@ -1,7 +1,7 @@
 
 package com.example.worldgen.dimension;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.block.ModBlocks;
 import com.example.worldgen.surface.ModSurfaceRules;
 
@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.*;
 public class ModNoiseSettings {
 
     public static final ResourceKey<NoiseGeneratorSettings> FROZEN_NOISE =
-            ResourceKey.create(Registries.NOISE_SETTINGS, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_noise"));
+            ResourceKey.create(Registries.NOISE_SETTINGS, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen_noise"));
 
     public static void bootstrap(BootstrapContext<NoiseGeneratorSettings> context) {
 

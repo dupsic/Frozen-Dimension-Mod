@@ -25,6 +25,6 @@ public class ModRegistryDataProvider extends FabricDynamicRegistryProvider {
 
     @Override
     public String getName() {
-        return "Frozen Dimention Mod Data Provider";
+        return "Frozen Dimension Mod Data Provider";
     }
 }

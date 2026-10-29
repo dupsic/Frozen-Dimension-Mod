@@ -1,6 +1,6 @@
 package com.example.block;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.block.custom.FrozenBerriesBlock;
 import com.example.block.custom.FrozenPortalBlock;
 import com.example.worldgen.tree.ModTreeGrowers;
@@ -8,7 +8,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.references.BlockItemIds;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -16,16 +15,12 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
-
-import static net.minecraft.world.level.block.Blocks.litBlockEmission;
 
 public class ModBlocks {
 
@@ -209,29 +204,29 @@ public class ModBlocks {
 
     // reģistrē jaunu bloku spēlē
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
-        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name))));
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name))));
         registerBlockitem(name, toRegister);
 
         // Pievieno bloku reģistram,
-        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name), toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name), toRegister);
     }
 
 
     // reģistrē bloku kā priekšmetu inventory
     // BlockItem ir bloks kurš ir inventory nevis tad kurs stav pasaule
     private static void registerBlockitem(String name, Block block) {
-        Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name),
+        Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name),
                 new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
-                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name)))));
+                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name)))));
     }
 
     private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
-        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name))));
-        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name), toRegister);
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name))));
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name), toRegister);
     }
 
 
     public static void registerModBlocks() {
-        FrozenDimention.LOGGER.info("Registering Mod Blocks for " + FrozenDimention.MOD_ID);
+        FrozenDimension.LOGGER.info("Registering Mod Blocks for " + FrozenDimension.MOD_ID);
     }
 }

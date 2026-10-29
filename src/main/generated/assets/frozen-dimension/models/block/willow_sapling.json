@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "frozen-dimension:block/willow_sapling"
+  }
+}

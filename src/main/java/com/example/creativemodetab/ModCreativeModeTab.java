@@ -1,6 +1,6 @@
 package com.example.creativemodetab;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.block.ModBlocks;
 import com.example.item.ModItems;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
@@ -12,10 +12,10 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
 public class ModCreativeModeTab {
-    public static final CreativeModeTab FROZEN_DIMENTION_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
-            Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_dimention"),
+    public static final CreativeModeTab FROZEN_DIMENSION_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen_dimension"),
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAW_CRYONITE))
-                    .title(Component.translatable("creativemodetab.frozen_dimention.frozen_dimention"))
+                    .title(Component.translatable("creativemodetab.frozen_dimension.frozen_dimension"))
                     .displayItems((parameters, output) -> {
 
                         output.accept(ModBlocks.FROZEN_GRASS);
@@ -76,6 +76,6 @@ public class ModCreativeModeTab {
                     .build());
 
     public static void registerModCreativeModeTabs() {
-        FrozenDimention.LOGGER.info("Registering Creative Mode Tabs for " + FrozenDimention.MOD_ID);
+        FrozenDimension.LOGGER.info("Registering Creative Mode Tabs for " + FrozenDimension.MOD_ID);
     }
 }

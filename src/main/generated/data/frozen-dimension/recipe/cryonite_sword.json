@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cryonite_sword",
+  "key": {
+    "C": "frozen-dimension:cryonite_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " C ",
+    " C ",
+    " S "
+  ],
+  "result": {
+    "id": "frozen-dimension:cryonite_sword"
+  }
+}

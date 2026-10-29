@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "frozen-dimention:block/frozen_berries_bush_stage0"
-  }
-}

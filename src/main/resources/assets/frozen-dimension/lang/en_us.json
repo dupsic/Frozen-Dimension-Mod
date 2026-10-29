@@ -1,0 +1,61 @@
+{
+  "creativemodetab.frozen_dimension.frozen_dimension": "Frozen Dimension",
+
+  "item.frozen-dimension.raw_cryonite": "Raw Cryonite",
+  "item.frozen-dimension.cryonite_ingot": "Cryonite Ingot",
+  "item.frozen-dimension.frozen_berries": "Frozen Berries",
+  "item.frozen-dimension.frozen_coal": "Frozen Coal",
+
+  "item.frozen-dimension.cryonite_pickaxe": "Cryonite Pickaxe",
+  "item.frozen-dimension.cryonite_sword": "Cryonite Sword",
+  "item.frozen-dimension.cryonite_axe": "Cryonite Axe",
+  "item.frozen-dimension.cryonite_shovel": "Cryonite Shovel",
+  "item.frozen-dimension.cryonite_hoe": "Cryonite Hoe",
+  "item.frozen-dimension.cryonite_bow": "Cryonite Bow",
+
+
+  "block.frozen-dimension.cryonite_ore": "Cryonite Ore",
+  "block.frozen-dimension.dark_blue_stone": "Dark Blue Stone",
+  "block.frozen-dimension.light_blue_stone": "Light Blue Stone",
+  "block.frozen-dimension.frozen_dirt": "Frozen Dirt",
+  "block.frozen-dimension.frozen_grass": "Frozen Grass Block",
+  "block.frozen-dimension.cryonite_block": "Cryonite Block",
+  "block.frozen-dimension.frozen_iron_ore": "Frozen Iron Ore",
+  "block.frozen-dimension.frozen_diamond_ore": "Frozen Diamond Ore",
+  "block.frozen-dimension.frozen_copper_ore": "Frozen Copper Ore",
+  "block.frozen-dimension.frozen_redstone_ore": "Frozen Redstone Ore",
+  "block.frozen-dimension.frozen_lapis_ore": "Frozen Lapi Ore",
+  "block.frozen-dimension.frozen_emerald_ore": "Frozen Emerald Ore",
+  "block.frozen-dimension.frozen_coal_ore": "Frozen Coal Ore",
+  "block.frozen-dimension.frozen_gold_ore": "Frozen Gold Ore",
+  "block.frozen-dimension.raw_cryonite_block": "Raw Cryonite Block",
+
+
+  "block.frozen-dimension.icebloom_log": "Icebloom Log",
+  "block.frozen-dimension.icebloom_wood": "Icebloom Wood",
+  "block.frozen-dimension.stripped_icebloom_log": "Stripped Icebloom Log",
+  "block.frozen-dimension.stripped_icebloom_wood": "Stripped Icebloom Wood",
+  "block.frozen-dimension.icebloom_planks": "Icebloom Planks",
+  "block.frozen-dimension.icebloom_leaves": "Icebloom Leaves",
+  "block.frozen-dimension.icebloom_sapling": "Icebloom Sapling",
+  "block.frozen-dimension.potted_icebloom_sapling": "Potted Willow Sapling",
+
+  "block.frozen-dimension.willow_log": "Willow Log",
+  "block.frozen-dimension.willow_wood": "Willow Wood",
+  "block.frozen-dimension.stripped_willow_log": "Stripped Willow Log",
+  "block.frozen-dimension.stripped_willow_wood": "Stripped Willow Wood",
+  "block.frozen-dimension.willow_planks": "Willow Planks",
+  "block.frozen-dimension.willow_leaves": "Willow Leaves",
+  "block.frozen-dimension.willow_sapling": "Willow Sapling",
+  "block.frozen-dimension.potted_willow_sapling": "Potted Willow Sapling",
+
+  "block.frozen-dimension.frozen_portal": "Frozen Portal Block",
+  "block.frozen-dimension.icebloom_flower": "Icebloom Flower",
+  "block.frozen-dimension.wasteland_flower": "Wasteland Flower",
+  "block.frozen-dimension.magic_flower": "Magic Flower",
+
+
+
+  "entity.frozen-dimension.frozenzombie": "Frozen Zombie",
+  "item.frozen-dimension.frozen_zombie_spawn_egg": "Frozen Zombie Spawn Egg"
+}

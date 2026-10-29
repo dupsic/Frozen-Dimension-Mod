@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "frozen-dimension:block/willow_leaves"
+  }
+}

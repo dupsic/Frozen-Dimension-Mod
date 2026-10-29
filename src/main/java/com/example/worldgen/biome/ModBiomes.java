@@ -1,13 +1,11 @@
 
 package com.example.worldgen.biome;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.attribute.EnvironmentAttributeMap;
@@ -22,16 +20,16 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> FROZEN_FOREST = ResourceKey.create(
-            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_forest"));
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen_forest"));
 
     public static final ResourceKey<Biome> FROZEN_WASTELAND = ResourceKey.create(
-            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_wasteland"));
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen_wasteland"));
 
     public static final ResourceKey<Biome> FROSTPEAK_MOUNTAINS = ResourceKey.create(
-            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frostpeak_mountains"));
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frostpeak_mountains"));
 
     public static final ResourceKey<Biome> FROZEN_MARSH = ResourceKey.create(
-            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_marsh"));
+            Registries.BIOME, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen_marsh"));
 
     public static void bootstrap(BootstrapContext<Biome> context) {
         context.register(FROZEN_FOREST, frozenForest(context));

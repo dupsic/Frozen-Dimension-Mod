@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "frozen-dimention",
+	"id": "frozen-dimension",
 	"version": "${version}",
-	"name": "Frozen dimention",
-	"description": "This is frozen dimention!",
+	"name": "Frozen dimension",
+	"description": "This is frozen dimension!",
 	"authors": [
 		"Arturs Jelagins"
 	],
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/dupsic"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/frozen-dimention/icon.png",
+	"icon": "assets/frozen-dimension/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.FrozenDimention"
+			"com.example.FrozenDimension"
 		],
 		"client": [
-			"com.example.FrozenDimentionClient"
+			"com.example.FrozenDimensionClient"
 		],
 		"fabric-datagen": [
-			"com.example.FrozenDimentionDataGenerator"
+			"com.example.FrozenDimensionDataGenerator"
 		]
 	},
 	"mixins": [
-		"frozen-dimention.mixins.json"
+      "frozen-dimension.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.5",

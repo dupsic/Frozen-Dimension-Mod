@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cryonite_axe",
+  "key": {
+    "C": "frozen-dimension:cryonite_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "CC ",
+    "CS ",
+    " S "
+  ],
+  "result": {
+    "id": "frozen-dimension:cryonite_axe"
+  }
+}

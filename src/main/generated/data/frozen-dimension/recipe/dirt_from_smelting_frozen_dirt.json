@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.25,
+  "group": "frozen",
+  "ingredient": "frozen-dimension:frozen_dirt",
+  "result": {
+    "id": "minecraft:dirt"
+  }
+}

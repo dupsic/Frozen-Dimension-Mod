@@ -1,6 +1,6 @@
 package com.example.item;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.block.ModBlocks;
 import com.example.entity.ModEntities;
 import com.example.food.ModFoods;
@@ -39,12 +39,12 @@ public class ModItems {
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
-        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name),
-                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name)))));
+        return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name),
+                function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name)))));
 
     }
 
     public static void registerModItems() {
-        FrozenDimention.LOGGER.info("Registering Mod Items for " + FrozenDimention.MOD_ID);
+        FrozenDimension.LOGGER.info("Registering Mod Items for " + FrozenDimension.MOD_ID);
     }
 }

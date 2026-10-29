@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_frozen_gold_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "frozen-dimension:frozen_gold_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "frozen-dimension:gold_ingot_from_smelting_frozen_gold_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_frozen_gold_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "frozen-dimension:gold_ingot_from_smelting_frozen_gold_ore"
+    ]
+  }
+}

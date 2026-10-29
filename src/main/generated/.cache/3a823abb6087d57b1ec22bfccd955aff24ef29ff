@@ -1,0 +1,14 @@
+// 26.2	-999999999-01-01T00:00:00	Frozen dimension/Tags for minecraft:block
+6111657a8aa6cb0f33ca8b749a197a33ef7a5999 data/frozen-dimension/tags/block/cryonite_mineable.json
+bd2ffc9a196d12f7ec7355b431cf68db84eb316f data/frozen-dimension/tags/block/icebloom_logs.json
+2df69c5ec6f0cfba256fe1e82631769e97595527 data/frozen-dimension/tags/block/willow_logs.json
+194301e6a3f63ef76ffd4f8ade0c1ab7bb863249 data/minecraft/tags/block/flower_pots.json
+98484f5d27dbd3b90b8451c1095df43ca33ef436 data/minecraft/tags/block/leaves.json
+e5091c60070e6e84afeb44f73b89f94d757aa1cc data/minecraft/tags/block/logs.json
+3f5335c34d6c0d49318c3a55332a19413c323a87 data/minecraft/tags/block/mineable/pickaxe.json
+0bfab03b94fbea22ea06f8aca56b6836595c11d5 data/minecraft/tags/block/mineable/shovel.json
+f1647a18af0bafd239eab09786aa3a28100c1322 data/minecraft/tags/block/needs_iron_tool.json
+31d3750c783ca7cf9651ca0d04ff99474de56d99 data/minecraft/tags/block/needs_stone_tool.json
+407d9ceed41bdbbd4bfd8d254dfa2ba71b9de668 data/minecraft/tags/block/planks.json
+86b5b0c6e80a7d4f547c80055b555e0709f246c5 data/minecraft/tags/block/stone_ore_replaceables.json
+0bfab03b94fbea22ea06f8aca56b6836595c11d5 data/minecraft/tags/block/supports_vegetation.json

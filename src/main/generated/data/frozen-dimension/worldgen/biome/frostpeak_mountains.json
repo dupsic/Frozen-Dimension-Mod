@@ -1,0 +1,47 @@
+{
+  "carvers": [],
+  "downfall": 0.5,
+  "effects": {
+    "foliage_color": "#a0e8f5",
+    "grass_color": "#c5f4ff",
+    "water_color": "#4abbd9"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "frozen-dimension:rare_ice_spike"
+    ],
+    [],
+    [
+      "frozen-dimension:cryonite_ore_placed",
+      "frozen-dimension:frozen_coal",
+      "frozen-dimension:frozen_iron",
+      "frozen-dimension:frozen_copper",
+      "frozen-dimension:frozen_gold",
+      "frozen-dimension:frozen_redstone",
+      "frozen-dimension:frozen_diamond",
+      "frozen-dimension:frozen_emerald"
+    ],
+    [],
+    [],
+    [
+      "frozen-dimension:icebloom_placed"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": -0.9
+}

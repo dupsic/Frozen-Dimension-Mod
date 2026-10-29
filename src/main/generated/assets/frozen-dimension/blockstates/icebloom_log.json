@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "frozen-dimension:block/icebloom_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "frozen-dimension:block/icebloom_log"
+    },
+    "axis=z": {
+      "model": "frozen-dimension:block/icebloom_log",
+      "x": 90
+    }
+  }
+}

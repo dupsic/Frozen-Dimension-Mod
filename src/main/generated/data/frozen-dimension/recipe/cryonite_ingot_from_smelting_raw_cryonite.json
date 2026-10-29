@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 0.25,
+  "group": "cryonite",
+  "ingredient": "frozen-dimension:raw_cryonite",
+  "result": {
+    "id": "frozen-dimension:cryonite_ingot"
+  }
+}

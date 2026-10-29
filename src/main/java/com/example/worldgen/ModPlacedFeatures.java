@@ -1,6 +1,6 @@
 package com.example.worldgen;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -39,7 +39,7 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> RARE_ICE_SPIKE = ResourceKey.create(
                     Registries.PLACED_FEATURE,
-                    Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "rare_ice_spike")
+                    Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "rare_ice_spike")
             );
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -160,7 +160,7 @@ public class ModPlacedFeatures {
 
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name));
     }
 
     private static void registerOre(

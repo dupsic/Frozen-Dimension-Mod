@@ -1,17 +1,15 @@
 package com.example.worldgen.dimension;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.worldgen.biome.ModBiomes;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.data.worldgen.biome.OverworldBiomes;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TimelineTags;
-import net.minecraft.util.ARGB;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.attribute.*;
 import net.minecraft.world.clock.WorldClocks;
@@ -28,11 +26,11 @@ import java.util.Optional;
 
 public class ModDimensions {
     public static final ResourceKey<LevelStem> FROZEN_KEY = ResourceKey.create(Registries.LEVEL_STEM,
-            Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen"));
+            Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen"));
      public static final ResourceKey<Level> FROZEN_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
-            Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen"));
+            Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen"));
      public static final ResourceKey<DimensionType> FROZEN_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
-            Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "frozen_type"));
+            Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "frozen_type"));
 
 
      public static void bootstrapType (BootstrapContext<DimensionType> context) {

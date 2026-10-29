@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cryonite_bow",
+  "key": {
+    "C": "frozen-dimension:cryonite_ingot",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    " CS",
+    "C S",
+    " CS"
+  ],
+  "result": {
+    "id": "frozen-dimension:cryonite_bow"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "frozen-dimension:block/icebloom_flower"
+  }
+}

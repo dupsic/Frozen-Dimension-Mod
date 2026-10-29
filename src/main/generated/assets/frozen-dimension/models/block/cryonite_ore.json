@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "frozen-dimension:block/cryonite_ore"
+  }
+}

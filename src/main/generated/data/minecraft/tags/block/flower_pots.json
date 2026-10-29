@@ -1,9 +1,9 @@
 {
   "values": [
-    "frozen-dimention:potted_icebloom_sapling",
-    "frozen-dimention:potted_willow_sapling",
-    "frozen-dimention:potted_icebloom_flower",
-    "frozen-dimention:potted_magic_flower",
-    "frozen-dimention:potted_wasteland_flower"
+    "frozen-dimension:potted_icebloom_sapling",
+    "frozen-dimension:potted_willow_sapling",
+    "frozen-dimension:potted_icebloom_flower",
+    "frozen-dimension:potted_magic_flower",
+    "frozen-dimension:potted_wasteland_flower"
   ]
 }

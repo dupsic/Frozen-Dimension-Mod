@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cryonite_pickaxe",
+  "key": {
+    "C": "frozen-dimension:cryonite_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "CCC",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "frozen-dimension:cryonite_pickaxe"
+  }
+}

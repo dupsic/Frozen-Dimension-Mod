@@ -1,6 +1,6 @@
 package com.example.entity.client;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import com.example.entity.custom.FrozenZombieEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -19,7 +19,7 @@ public class FrozenZombieRenderer extends MobRenderer<FrozenZombieEntity, Frozen
 
     @Override
     public Identifier getTextureLocation(FrozenZombieRenderState state) {
-        return Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, "textures/entity/frozenzombie/frozen_zombie.png");
+        return Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, "textures/entity/frozenzombie/frozen_zombie.png");
     }
 
     @Override

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "frozen-dimention:block/icebloom_log_top",
-    "side": "frozen-dimention:block/icebloom_log"
-  }
-}

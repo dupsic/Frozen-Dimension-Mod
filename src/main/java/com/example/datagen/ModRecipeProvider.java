@@ -168,6 +168,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "Frozen Dimention Recipes";
+        return "Frozen Dimension Recipes";
     }
 }

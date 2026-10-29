@@ -1,6 +1,6 @@
 package com.example.tags;
 
-import com.example.FrozenDimention;
+import com.example.FrozenDimension;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
@@ -16,7 +16,7 @@ public class ModTags {
         public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
 
         public static TagKey<Block> createTag(String name) {
-            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name));
 
 
         }
@@ -29,7 +29,7 @@ public class ModTags {
 
 
         public static TagKey<Item> createTag(String name) {
-            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimention.MOD_ID, name));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name));
         }
 
 

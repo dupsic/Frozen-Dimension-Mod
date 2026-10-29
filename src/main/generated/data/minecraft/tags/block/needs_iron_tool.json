@@ -1,15 +1,15 @@
 {
   "values": [
-    "frozen-dimention:cryonite_ore",
-    "frozen-dimention:dark_blue_stone",
-    "frozen-dimention:light_blue_stone",
-    "frozen-dimention:raw_cryonite_block",
-    "frozen-dimention:frozen_diamond_ore",
-    "frozen-dimention:frozen_redstone_ore",
-    "frozen-dimention:frozen_gold_ore",
-    "frozen-dimention:frozen_emerald_ore",
-    "frozen-dimention:frozen_lapis_ore",
-    "frozen-dimention:frozen_copper_ore",
-    "frozen-dimention:cryonite_block"
+    "frozen-dimension:cryonite_ore",
+    "frozen-dimension:dark_blue_stone",
+    "frozen-dimension:light_blue_stone",
+    "frozen-dimension:raw_cryonite_block",
+    "frozen-dimension:frozen_diamond_ore",
+    "frozen-dimension:frozen_redstone_ore",
+    "frozen-dimension:frozen_gold_ore",
+    "frozen-dimension:frozen_emerald_ore",
+    "frozen-dimension:frozen_lapis_ore",
+    "frozen-dimension:frozen_copper_ore",
+    "frozen-dimension:cryonite_block"
   ]
 }
