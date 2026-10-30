@@ -69,6 +69,10 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.CRYONITE_SHOVEL);
                         output.accept(ModItems.CRYONITE_HOE);
                         output.accept(ModItems.CRYONITE_BOW);
+                        output.accept(ModItems.CRYONITE_STAFF);
+                        output.accept(ModItems.EMBER_STAFF);
+                        output.accept(ModItems.GLACIER_STAFF);
+                        output.accept(ModItems.RIFT_STAFF);
 
 
                         output.accept(ModItems.FROZEN_ZOMBIE_SPAWN_EGG);
