@@ -6,6 +6,7 @@ import com.example.entity.ModEntities;
 import com.example.entity.custom.FrozenZombieEntity;
 import com.example.item.ModItems;
 import com.example.item.custom.CryonitePickaxe;
+import com.example.item.custom.CryoniteShovel;
 import com.example.registries.ModFlammableBlocks;
 import com.example.registries.ModFuels;
 import com.example.registries.ModStrippedableBlocks;
@@ -32,6 +33,7 @@ public class FrozenDimension implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		CryonitePickaxe.register();
+		CryoniteShovel.register();
 
 
 		ModBlocks.registerModBlocks();
