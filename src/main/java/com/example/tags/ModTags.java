@@ -14,6 +14,7 @@ public class ModTags {
         public static final TagKey<Block> CRYONITE_MINEABLE = createTag("cryonite_mineable");
         public static final TagKey<Block> ICEBLOOM_LOGS = createTag("icebloom_logs");
         public static final TagKey<Block> WILLOW_LOGS = createTag("willow_logs");
+        public static final TagKey<Block> ORES = createTag("frozen_ores");
 
         public static TagKey<Block> createTag(String name) {
             return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FrozenDimension.MOD_ID, name));

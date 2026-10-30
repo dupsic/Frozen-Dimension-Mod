@@ -1,0 +1,13 @@
+{
+  "values": [
+    "frozen-dimension:cryonite_ore",
+    "frozen-dimension:frozen_coal_ore",
+    "frozen-dimension:frozen_copper_ore",
+    "frozen-dimension:frozen_diamond_ore",
+    "frozen-dimension:frozen_emerald_ore",
+    "frozen-dimension:frozen_gold_ore",
+    "frozen-dimension:frozen_iron_ore",
+    "frozen-dimension:frozen_lapis_ore",
+    "frozen-dimension:frozen_redstone_ore"
+  ]
+}

@@ -1,5 +1,7 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimension/Tags for minecraft:block
+3728dbe6490bee5a815c0cea5b87f230f45b901a data/c/tags/block/ores.json
 6111657a8aa6cb0f33ca8b749a197a33ef7a5999 data/frozen-dimension/tags/block/cryonite_mineable.json
+5443ba1a2348b21209e552a749efa5325b76e78b data/frozen-dimension/tags/block/frozen_ores.json
 bd2ffc9a196d12f7ec7355b431cf68db84eb316f data/frozen-dimension/tags/block/icebloom_logs.json
 2df69c5ec6f0cfba256fe1e82631769e97595527 data/frozen-dimension/tags/block/willow_logs.json
 194301e6a3f63ef76ffd4f8ade0c1ab7bb863249 data/minecraft/tags/block/flower_pots.json

@@ -5,6 +5,7 @@ import com.example.item.ModItems;
 import com.example.tags.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -99,5 +100,18 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
         tag(BlockTags.STONE_ORE_REPLACEABLES)
                 .add(ModBlocks.getRK(ModBlocks.LIGHT_BLUE_STONE));
 
+        tag(ModTags.Blocks.ORES)
+                .add(ModBlocks.getRK(ModBlocks.CRYONITE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_COAL_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_COPPER_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_DIAMOND_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_EMERALD_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_GOLD_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_IRON_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_LAPIS_ORE))
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_REDSTONE_ORE));
+
+        tag(ConventionalBlockTags.ORES)
+                .addTag(ModTags.Blocks.ORES);
     }
 }
