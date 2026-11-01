@@ -39,9 +39,9 @@ public class ModItems {
     public static final Item CRYONITE_BOW = registerItem("cryonite_bow", properties -> new BowItem(properties.durability(500)));
 
 
-    public static final Item CRYONITE_STAFF = registerItem("cryonite_staff", properties -> new CryoniteStaff(properties.durability(500).useCooldown(5)));
-    public static final Item RIFT_STAFF = registerItem("rift_staff", properties -> new RiftStaff(properties.durability(500).useCooldown(5)));
-    public static final Item EMBER_STAFF = registerItem("ember_staff", properties -> new EmberStaff(properties.durability(500).useCooldown(5)));
+    public static final Item CRYONITE_STAFF = registerItem("cryonite_staff", properties -> new CryoniteStaff(properties.durability(500)));
+    public static final Item RIFT_STAFF = registerItem("rift_staff", properties -> new RiftStaff(properties.durability(500).useCooldown(3)));
+    public static final Item EMBER_STAFF = registerItem("ember_staff", properties -> new EmberStaff(properties.durability(500).useCooldown(8)));
     public static final Item GLACIER_STAFF = registerItem("glacier_staff", properties -> new GlacierStaff(properties.durability(500).useCooldown(5)));
 
 
