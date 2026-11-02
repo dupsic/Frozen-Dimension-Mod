@@ -22,7 +22,7 @@ import java.util.Set;
 public class RiftStaff extends Item {
 
     private static final double RANGE = 200.0;
-    private static final int COOLDOWN = 1;
+    private static final int COOLDOWN = 60;
 
     public RiftStaff(Properties properties) {
         super(properties);
