@@ -31,11 +31,12 @@ public class CryoniteStaff extends Item {
         super(properties);
     }
     private static final Map<UUID, Integer> playerModes = new HashMap<>();
-    private static final Map<UUID, Direction> breakFaces = new HashMap<>();
+//    private static final Map<UUID, Direction> breakFaces = new HashMap<>();
     private static final int ICE_DURATION = 100;
     private static final double RANGE = 32.0;
     private static final float DAMAGE = 10.0F;
     private static final double SPLASH_RADIUS = 3.0;
+    private static final int COOLDOWN = 60;
 
 
     private record IceTask(
@@ -69,17 +70,6 @@ public class CryoniteStaff extends Item {
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
 
-        UUID playerId = player.getUUID();
-        BlockHitResult hit = (BlockHitResult) player.pick(6, 0.0F, false);
-
-
-        BlockHitResult blockHit = hit;
-
-        BlockPos pos = blockHit.getBlockPos();
-        breakFaces.put(playerId, hit.getDirection());
-
-
-
         if (!(level instanceof ServerLevel serverLevel)) {
             return InteractionResult.SUCCESS;
         }
@@ -87,6 +77,12 @@ public class CryoniteStaff extends Item {
         if (player.getCooldowns().isOnCooldown(stack)) {
             return InteractionResult.FAIL;
         }
+
+
+        UUID playerId = player.getUUID();
+        BlockHitResult hit = (BlockHitResult) player.pick(6, 0.0F, false);
+        BlockPos pos = hit.getBlockPos();
+
 
 
         int mode = playerModes.getOrDefault(playerId, 0);
@@ -105,7 +101,9 @@ public class CryoniteStaff extends Item {
 
         switch (mode) {
             case 0 -> {
-
+                if (hit.getType() == HitResult.Type.MISS) {
+                    return InteractionResult.FAIL;
+                }
                 iceWall(serverLevel, player, pos);
                 level.playSound(
                         null,
@@ -117,6 +115,8 @@ public class CryoniteStaff extends Item {
                         1.0F,
                         0.8F
                 );
+                player.getCooldowns().addCooldown(stack, COOLDOWN);
+
             }
             case 1 -> {
 
@@ -136,6 +136,8 @@ public class CryoniteStaff extends Item {
                         1.0F,
                         0.8F
                 );
+                player.getCooldowns().addCooldown(stack, COOLDOWN);
+
             }
 
         }
@@ -172,6 +174,10 @@ public class CryoniteStaff extends Item {
 
                 BlockPos target = getTargetPos(pos, wallDirection, x, y);
 
+                if (!level.getBlockState(target).isAir()) {
+                    continue;
+                }
+
                 level.setBlockAndUpdate(target, Blocks.ICE.defaultBlockState());
 
                 iceTasks.add(new IceTask(level, target.immutable(), level.getGameTime() + ICE_DURATION));
@@ -182,9 +188,9 @@ public class CryoniteStaff extends Item {
     private static BlockPos getTargetPos(BlockPos pos, Direction face, int x, int y) {
 
         return switch (face.getAxis()) {
-            case X -> pos.offset(0, y+3, x);
-            case Z -> pos.offset(x, y+3, 0);
-            case Y -> pos.offset(x, y+3, 0);
+            case X -> pos.offset(0, y+2, x);
+            case Z -> pos.offset(x, y+2, 0);
+            case Y -> pos.offset(x, y+2, 0);
         };
     }
 
