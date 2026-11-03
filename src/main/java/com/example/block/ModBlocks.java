@@ -192,10 +192,9 @@ public class ModBlocks {
                     properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
+
     public static final Block FROZEN_PORTAL = registerBlock("frozen_portal",
             properties -> new FrozenPortalBlock(properties.strength(3f)));
-
-
 
 
 

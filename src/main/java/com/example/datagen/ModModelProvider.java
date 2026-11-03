@@ -84,7 +84,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.FROZEN_ZOMBIE_SPAWN_EGG, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.declareCustomModelItem(ModItems.CRYONITE_STAFF);
         itemModelGenerators.declareCustomModelItem(ModItems.EMBER_STAFF);
-        itemModelGenerators.declareCustomModelItem(ModItems.GLACIER_STAFF);
         itemModelGenerators.declareCustomModelItem(ModItems.RIFT_STAFF);
 
 

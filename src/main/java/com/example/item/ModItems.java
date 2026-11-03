@@ -6,7 +6,6 @@ import com.example.entity.ModEntities;
 import com.example.food.ModFoods;
 import com.example.item.custom.CryoniteStaff;
 import com.example.item.custom.EmberStaff;
-import com.example.item.custom.GlacierStaff;
 import com.example.item.custom.RiftStaff;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -42,7 +41,6 @@ public class ModItems {
     public static final Item CRYONITE_STAFF = registerItem("cryonite_staff", properties -> new CryoniteStaff(properties.durability(500)));
     public static final Item RIFT_STAFF = registerItem("rift_staff", properties -> new RiftStaff(properties.durability(500)));
     public static final Item EMBER_STAFF = registerItem("ember_staff", properties -> new EmberStaff(properties.durability(500)));
-    public static final Item GLACIER_STAFF = registerItem("glacier_staff", properties -> new GlacierStaff(properties.durability(500).useCooldown(5)));
 
 
     public static final Item FROZEN_ZOMBIE_SPAWN_EGG = registerItem("frozen_zombie_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.FROZENZOMBIE)));

@@ -1,7 +1,10 @@
-
 package com.example.item.custom;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -17,23 +20,65 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.*;
 
-public class CryoniteStaff extends Item {
+import java.util.*;
 
+
+public class CryoniteStaff extends Item {
+    public CryoniteStaff(Properties properties) {
+        super(properties);
+    }
+    private static final Map<UUID, Integer> playerModes = new HashMap<>();
+    private static final Map<UUID, Direction> breakFaces = new HashMap<>();
+    private static final int ICE_DURATION = 100;
     private static final double RANGE = 32.0;
-    private static final int COOLDOWN = 60;
     private static final float DAMAGE = 10.0F;
     private static final double SPLASH_RADIUS = 3.0;
 
-    public CryoniteStaff(Properties properties) {
-        super(properties);
+
+    private record IceTask(
+            ServerLevel level,
+            BlockPos pos,
+            long removeAt
+    ) {}
+
+    private static final List<IceTask> iceTasks = new ArrayList<>();
+
+    public static void register() {
+
+        ServerTickEvents.END_SERVER_TICK.register(server -> {
+
+            iceTasks.removeIf(task -> {
+
+                if (task.level().getGameTime() < task.removeAt()) {
+                    return false;
+                }
+
+                if (task.level().getBlockState(task.pos()).is(Blocks.ICE)) {
+                    task.level().removeBlock(task.pos(), false);
+                }
+
+                return true;
+            });
+        });
     }
 
     @Override
     public InteractionResult use(Level level, Player player, InteractionHand hand) {
-
         ItemStack stack = player.getItemInHand(hand);
+
+        UUID playerId = player.getUUID();
+        BlockHitResult hit = (BlockHitResult) player.pick(6, 0.0F, false);
+
+
+        BlockHitResult blockHit = hit;
+
+        BlockPos pos = blockHit.getBlockPos();
+        breakFaces.put(playerId, hit.getDirection());
+
+
 
         if (!(level instanceof ServerLevel serverLevel)) {
             return InteractionResult.SUCCESS;
@@ -43,17 +88,104 @@ public class CryoniteStaff extends Item {
             return InteractionResult.FAIL;
         }
 
-        Vec3 start = player.getEyePosition();
 
-        Vec3 end = findLaserEnd(serverLevel, player, start);
+        int mode = playerModes.getOrDefault(playerId, 0);
 
-        spawnParticles(serverLevel, start, end);
+        if (player.isShiftKeyDown()) {
 
-        playSound(serverLevel, player);
+            mode = (mode + 1) % 2;
+            playerModes.put(playerId, mode);
 
-        player.getCooldowns().addCooldown(stack, COOLDOWN);
+
+            if (mode == 0) player.sendSystemMessage(Component.literal("Mode: Ice Wall"));
+            if (mode == 1) player.sendSystemMessage(Component.literal("Mode: Snow Laser"));
+
+            return InteractionResult.SUCCESS;
+        }
+
+        switch (mode) {
+            case 0 -> {
+
+                iceWall(serverLevel, player, pos);
+                level.playSound(
+                        null,
+                        player.getX(),
+                        player.getY(),
+                        player.getZ(),
+                        SoundEvents.GLASS_PLACE,
+                        SoundSource.PLAYERS,
+                        1.0F,
+                        0.8F
+                );
+            }
+            case 1 -> {
+
+                Vec3 start = player.getEyePosition();
+
+                Vec3 end = findLaserEnd(serverLevel, player, start);
+
+                spawnParticles(serverLevel, start, end);
+
+                level.playSound(
+                        null,
+                        player.getX(),
+                        player.getY(),
+                        player.getZ(),
+                        SoundEvents.GLASS_BREAK,
+                        SoundSource.PLAYERS,
+                        1.0F,
+                        0.8F
+                );
+            }
+
+        }
 
         return InteractionResult.SUCCESS;
+    }
+
+    private static void iceWall(ServerLevel level, Player player, BlockPos pos) {
+        Direction wallDirection;
+
+        double dx = pos.getX() + 0.5 - player.getX();
+        double dz = pos.getZ() + 0.5 - player.getZ();
+
+        if (Math.abs(dx) > Math.abs(dz)) {
+
+            if (dx > 0) {
+                wallDirection = Direction.EAST;
+            } else {
+                wallDirection = Direction.WEST;
+            }
+
+        } else {
+
+            if (dz > 0) {
+                wallDirection = Direction.SOUTH;
+            } else {
+                wallDirection = Direction.NORTH;
+            }
+        }
+
+
+        for (int x = -2; x <= 2; x++) {
+            for (int y = -2; y <= 2; y++) {
+
+                BlockPos target = getTargetPos(pos, wallDirection, x, y);
+
+                level.setBlockAndUpdate(target, Blocks.ICE.defaultBlockState());
+
+                iceTasks.add(new IceTask(level, target.immutable(), level.getGameTime() + ICE_DURATION));
+            }
+        }
+    }
+
+    private static BlockPos getTargetPos(BlockPos pos, Direction face, int x, int y) {
+
+        return switch (face.getAxis()) {
+            case X -> pos.offset(0, y+3, x);
+            case Z -> pos.offset(x, y+3, 0);
+            case Y -> pos.offset(x, y+3, 0);
+        };
     }
 
     private Vec3 findLaserEnd(ServerLevel level, Player player, Vec3 start) {
@@ -92,7 +224,6 @@ public class CryoniteStaff extends Item {
 
         return end;
     }
-
     private void applyDamage(ServerLevel level, Entity target) {
 
         target.hurtServer(level, level.damageSources().magic(), DAMAGE);
@@ -150,17 +281,7 @@ public class CryoniteStaff extends Item {
         }
     }
 
-    private void playSound(ServerLevel level, Player player) {
 
-        level.playSound(
-                null,
-                player.getX(),
-                player.getY(),
-                player.getZ(),
-                SoundEvents.GLASS_BREAK,
-                SoundSource.PLAYERS,
-                1.0F,
-                0.8F
-        );
-    }
 }
+
+

@@ -71,7 +71,6 @@ public class ModCreativeModeTab {
                         output.accept(ModItems.CRYONITE_BOW);
                         output.accept(ModItems.CRYONITE_STAFF);
                         output.accept(ModItems.EMBER_STAFF);
-                        output.accept(ModItems.GLACIER_STAFF);
                         output.accept(ModItems.RIFT_STAFF);
 
 
