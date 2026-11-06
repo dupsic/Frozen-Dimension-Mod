@@ -1,0 +1,93 @@
+Date : 2026-11-05 10:19:21
+Directory : c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java
+Total : 43 files,  2792 codes, 43 comments, 878 blanks, all 3713 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Java     |         43 |      2,792 |         43 |        878 |      3,713 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                             | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                |         43 |      2,792 |         43 |        878 |      3,713 |
+| com                                                                                                              |         43 |      2,792 |         43 |        878 |      3,713 |
+| com\example                                                                                                      |         43 |      2,792 |         43 |        878 |      3,713 |
+| com\example (Files)                                                                                              |          3 |        104 |          0 |         37 |        141 |
+| com\example\block                                                                                                |          3 |        292 |          7 |         86 |        385 |
+| com\example\block (Files)                                                                                        |          1 |        168 |          5 |         59 |        232 |
+| com\example\block\custom                                                                                         |          2 |        124 |          2 |         27 |        153 |
+| com\example\creativemodetab                                                                                      |          1 |         69 |          1 |         15 |         85 |
+| com\example\datagen                                                                                              |          6 |        413 |          0 |        133 |        546 |
+| com\example\entity                                                                                               |          7 |        269 |          9 |         73 |        351 |
+| com\example\entity (Files)                                                                                       |          1 |         20 |          0 |          9 |         29 |
+| com\example\entity\client                                                                                        |          5 |        163 |          9 |         42 |        214 |
+| com\example\entity\custom                                                                                        |          1 |         86 |          0 |         22 |        108 |
+| com\example\food                                                                                                 |          1 |         12 |          0 |          5 |         17 |
+| com\example\item                                                                                                 |          9 |        824 |          9 |        316 |      1,149 |
+| com\example\item (Files)                                                                                         |          2 |         51 |          0 |         17 |         68 |
+| com\example\item\custom                                                                                          |          7 |        773 |          9 |        299 |      1,081 |
+| com\example\mixin                                                                                                |          1 |         12 |          1 |          2 |         15 |
+| com\example\registries                                                                                           |          3 |         41 |          0 |         15 |         56 |
+| com\example\tags                                                                                                 |          1 |         28 |          0 |         12 |         40 |
+| com\example\worldgen                                                                                             |          8 |        728 |         16 |        184 |        928 |
+| com\example\worldgen (Files)                                                                                     |          2 |        288 |          0 |         64 |        352 |
+| com\example\worldgen\biome                                                                                       |          1 |        212 |          6 |         59 |        277 |
+| com\example\worldgen\dimension                                                                                   |          2 |        159 |          4 |         30 |        193 |
+| com\example\worldgen\gen                                                                                         |          1 |         12 |          2 |          5 |         19 |
+| com\example\worldgen\surface                                                                                     |          1 |         46 |          4 |         18 |         68 |
+| com\example\worldgen\tree                                                                                        |          1 |         11 |          0 |          8 |         19 |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                         | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\FrozenDimension.java                       | Java     |         54 |          0 |         23 |         77 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\FrozenDimensionClient.java                 | Java     |         18 |          0 |          6 |         24 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\FrozenDimensionDataGenerator.java          | Java     |         32 |          0 |          8 |         40 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\block\ModBlocks.java                       | Java     |        168 |          5 |         59 |        232 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\block\custom\FrozenBerriesBlock.java       | Java     |         42 |          0 |         11 |         53 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\block\custom\FrozenPortalBlock.java        | Java     |         82 |          2 |         16 |        100 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\creativemodetab\ModCreativeModeTab.java    | Java     |         69 |          1 |         15 |         85 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\datagen\ModBlockLootTableProvider.java     | Java     |         53 |          0 |         24 |         77 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\datagen\ModBlockTagsProvider.java          | Java     |         96 |          0 |         22 |        118 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\datagen\ModItemTagsProvider.java           | Java     |         39 |          0 |         15 |         54 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\datagen\ModModelProvider.java              | Java     |         66 |          0 |         26 |         92 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\datagen\ModRecipeProvider.java             | Java     |        135 |          0 |         39 |        174 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\datagen\ModRegistryDataProvider.java       | Java     |         24 |          0 |          7 |         31 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\ModEntities.java                    | Java     |         20 |          0 |          9 |         29 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\client\FrozenZombieAnimations.java  | Java     |         71 |          0 |          5 |         76 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\client\FrozenZombieModel.java       | Java     |         54 |          9 |         23 |         86 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\client\FrozenZombieRenderState.java | Java     |          6 |          0 |          3 |          9 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\client\FrozenZombieRenderer.java    | Java     |         24 |          0 |          8 |         32 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\client\ModModelLayerLocation.java   | Java     |          8 |          0 |          3 |         11 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\entity\custom\FrozenZombieEntity.java      | Java     |         86 |          0 |         22 |        108 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\food\ModFoods.java                         | Java     |         12 |          0 |          5 |         17 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\ModItems.java                         | Java     |         44 |          0 |         15 |         59 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\ModToolMaterials.java                 | Java     |          7 |          0 |          2 |          9 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\CryoniteAxe.java               | Java     |        110 |          0 |         45 |        155 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\CryoniteHoe.java               | Java     |         47 |          1 |         20 |         68 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\CryonitePickaxe.java           | Java     |         93 |          0 |         47 |        140 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\CryoniteShovel.java            | Java     |         88 |          0 |         34 |        122 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\CryoniteStaff.java             | Java     |        209 |          1 |         84 |        294 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\EmberStaff.java                | Java     |        131 |          0 |         33 |        164 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\item\custom\RiftStaff.java                 | Java     |         95 |          7 |         36 |        138 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\mixin\ExampleMixin.java                    | Java     |         12 |          1 |          2 |         15 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\registries\ModFlammableBlocks.java         | Java     |         19 |          0 |          7 |         26 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\registries\ModFuels.java                   | Java     |         11 |          0 |          2 |         13 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\registries\ModStrippedableBlocks.java      | Java     |         11 |          0 |          6 |         17 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\tags\ModTags.java                          | Java     |         28 |          0 |         12 |         40 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\ModConfiguredFeatures.java        | Java     |        135 |          0 |         29 |        164 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\ModPlacedFeatures.java            | Java     |        153 |          0 |         35 |        188 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\biome\ModBiomes.java              | Java     |        212 |          6 |         59 |        277 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\dimension\ModDimensions.java      | Java     |        124 |          4 |         20 |        148 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\dimension\ModNoiseSettings.java   | Java     |         35 |          0 |         10 |         45 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\gen\ModWorldGeneration.java       | Java     |         12 |          2 |          5 |         19 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\surface\ModSurfaceRules.java      | Java     |         46 |          4 |         18 |         68 |
+| c:\Users\artur\Desktop\Frozen-Dimention-Mod\src\main\java\com\example\worldgen\tree\ModTreeGrowers.java          | Java     |         11 |          0 |          8 |         19 |
+| Total                                                                                                            |          |      2,792 |         43 |        878 |      3,713 |
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

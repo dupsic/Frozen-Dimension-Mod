@@ -39,6 +39,10 @@ public class CryonitePickaxe {
                         return;
                     }
 
+                    if (player.isShiftKeyDown()) {
+                        return;
+                    }
+
                     if (!isValidOre(state)) {
                         return;
                     }

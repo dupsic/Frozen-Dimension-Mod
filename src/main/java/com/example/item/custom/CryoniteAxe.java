@@ -13,7 +13,7 @@ import java.util.*;
 
 public class CryoniteAxe {
     private static final Set<UUID> choppingPlayers = new HashSet<>();
-    private static final int MAX_LOGS = 512;
+    private static final int MAX_LOGS = 128;
 
     public static void register() {
 
