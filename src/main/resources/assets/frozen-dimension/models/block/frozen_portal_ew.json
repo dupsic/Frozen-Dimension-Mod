@@ -1,0 +1,22 @@
+{
+  "textures": {
+    "particle": "frozen-dimension:block/frozen_portal",
+    "portal": "frozen-dimension:block/frozen_portal"
+  },
+  "elements": [
+    {
+      "from": [7, 0, 0],
+      "to": [9, 16, 16],
+      "faces": {
+        "east": {
+          "uv": [0, 0, 16, 16],
+          "texture": "#portal"
+        },
+        "west": {
+          "uv": [0, 0, 16, 16],
+          "texture": "#portal"
+        }
+      }
+    }
+  ]
+}

@@ -7,14 +7,26 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
 import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+
+import java.util.function.Consumer;
+
+import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricPackOutput output) {
         super(output);
     }
+
+
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
@@ -62,8 +74,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.MAGIC_FLOWER,ModBlocks.POTTED_MAGIC_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createPlantWithDefaultItem(ModBlocks.WASTELAND_FLOWER,ModBlocks.POTTED_WASTELAND_FLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
 
-        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_PORTAL);
-
+//        blockModelGenerators.createTrivialCube(ModBlocks.FROZEN_PORTAL);
+        createFrozenPortalBlock(blockModelGenerators);
     }
 
     @Override
@@ -87,5 +99,15 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.declareCustomModelItem(ModItems.RIFT_STAFF);
 
 
+    }
+
+    private void createFrozenPortalBlock(BlockModelGenerators blockModelGenerators) {
+        blockModelGenerators.blockStateOutput.accept(
+                MultiVariantGenerator.dispatch(ModBlocks.FROZEN_PORTAL).with(
+                        PropertyDispatch.initial(BlockStateProperties.HORIZONTAL_AXIS)
+                                .select(Direction.Axis.X, plainVariant(ModelLocationUtils.getModelLocation(ModBlocks.FROZEN_PORTAL, "_ns")))
+                                .select(Direction.Axis.Z, plainVariant(ModelLocationUtils.getModelLocation(ModBlocks.FROZEN_PORTAL, "_ew")))
+                )
+        );
     }
 }

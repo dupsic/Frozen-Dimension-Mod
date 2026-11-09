@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "frozen-dimension:block/frozen_portal"
+    "axis=x": {
+      "model": "frozen-dimension:block/frozen_portal_ns"
+    },
+    "axis=z": {
+      "model": "frozen-dimension:block/frozen_portal_ew"
     }
   }
 }
