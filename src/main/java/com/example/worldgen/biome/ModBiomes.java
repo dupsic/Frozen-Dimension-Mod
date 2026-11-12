@@ -2,14 +2,19 @@
 package com.example.worldgen.biome;
 
 import com.example.FrozenDimension;
+import com.example.entity.ModEntities;
 import com.example.worldgen.ModPlacedFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.attribute.EnvironmentAttributeMap;
 import net.minecraft.world.attribute.EnvironmentAttributes;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.biome.BiomeSpecialEffects;
@@ -65,6 +70,8 @@ public class ModBiomes {
                 ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_LAPIS_PLACED_KEY);
 
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
                 ModPlacedFeatures.FROZEN_BERRIES_PLACED_KEY);
@@ -79,6 +86,13 @@ public class ModBiomes {
 
 
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+        spawns.addSpawn(MobCategory.MONSTER, 95, new MobSpawnSettings.SpawnerData(ModEntities.FROZENZOMBIE, 4, 4));
+
+        BiomeDefaultFeatures.farmAnimals(spawns);
+        BiomeDefaultFeatures.commonSpawns(spawns);
+        BiomeDefaultFeatures.caveSpawns(spawns);
+        BiomeDefaultFeatures.oceanSpawns(spawns, 1, 4, 10);
+
 
         BiomeSpecialEffects effects =
                 new BiomeSpecialEffects.Builder()
@@ -122,7 +136,8 @@ public class ModBiomes {
                 ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
-
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_LAPIS_PLACED_KEY);
         // flowers
         generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
                 ModPlacedFeatures.ICEBLOOM_FLOWER_PLACED_KEY);
@@ -136,6 +151,13 @@ public class ModBiomes {
                 ModPlacedFeatures.RARE_ICEBLOOM_TREE_PLACED_KEY);
 
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+        spawns.addSpawn(MobCategory.MONSTER, 95, new MobSpawnSettings.SpawnerData(ModEntities.FROZENZOMBIE, 4, 4));
+
+        BiomeDefaultFeatures.farmAnimals(spawns);
+        BiomeDefaultFeatures.commonSpawns(spawns);
+        BiomeDefaultFeatures.caveSpawns(spawns);
+        BiomeDefaultFeatures.oceanSpawns(spawns, 1, 4, 10);
+
 
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
                         .waterColor(0x4ABBD9)
@@ -163,8 +185,6 @@ public class ModBiomes {
         BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
 
         // ores
-        generation.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ICEBLOOM_TREE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.CRYONITE_ORE_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
@@ -181,7 +201,8 @@ public class ModBiomes {
                 ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
-
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_LAPIS_PLACED_KEY);
 
 
         generation.addFeature(
@@ -191,6 +212,12 @@ public class ModBiomes {
 
 
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+        spawns.addSpawn(MobCategory.MONSTER, 95, new MobSpawnSettings.SpawnerData(ModEntities.FROZENZOMBIE, 4, 4));
+
+        BiomeDefaultFeatures.farmAnimals(spawns);
+        BiomeDefaultFeatures.commonSpawns(spawns);
+        BiomeDefaultFeatures.caveSpawns(spawns);
+        BiomeDefaultFeatures.oceanSpawns(spawns, 1, 4, 10);
 
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
                         .waterColor(0x4ABBD9)
@@ -246,6 +273,8 @@ public class ModBiomes {
                 ModPlacedFeatures.FROZEN_DIAMOND_PLACED_KEY);
         generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
                 ModPlacedFeatures.FROZEN_EMERALD_PLACED_KEY);
+        generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.FROZEN_LAPIS_PLACED_KEY);
 
         EnvironmentAttributeMap marshAttributes = EnvironmentAttributeMap.builder()
                 .set(EnvironmentAttributes.FOG_COLOR, 0xFF9BB8C9)
@@ -254,6 +283,12 @@ public class ModBiomes {
                 .build();
 
         MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+        spawns.addSpawn(MobCategory.MONSTER, 95, new MobSpawnSettings.SpawnerData(ModEntities.FROZENZOMBIE, 4, 4));
+
+        BiomeDefaultFeatures.farmAnimals(spawns);
+        BiomeDefaultFeatures.commonSpawns(spawns);
+        BiomeDefaultFeatures.caveSpawns(spawns);
+        BiomeDefaultFeatures.oceanSpawns(spawns, 1, 4, 10);
 
         BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder()
                 .waterColor(0x346D91)

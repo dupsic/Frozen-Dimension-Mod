@@ -113,5 +113,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider{
 
         tag(ConventionalBlockTags.ORES)
                 .addTag(ModTags.Blocks.ORES);
+
+
+        tag(BlockTags.ANIMALS_SPAWNABLE_ON)
+                .add(ModBlocks.getRK(ModBlocks.FROZEN_GRASS));
     }
 }

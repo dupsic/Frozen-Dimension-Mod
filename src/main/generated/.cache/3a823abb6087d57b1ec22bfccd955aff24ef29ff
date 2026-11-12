@@ -4,6 +4,7 @@
 5443ba1a2348b21209e552a749efa5325b76e78b data/frozen-dimension/tags/block/frozen_ores.json
 bd2ffc9a196d12f7ec7355b431cf68db84eb316f data/frozen-dimension/tags/block/icebloom_logs.json
 2df69c5ec6f0cfba256fe1e82631769e97595527 data/frozen-dimension/tags/block/willow_logs.json
+b658336920cd432578718b1c4c0e8289678f806b data/minecraft/tags/block/animals_spawnable_on.json
 194301e6a3f63ef76ffd4f8ade0c1ab7bb863249 data/minecraft/tags/block/flower_pots.json
 98484f5d27dbd3b90b8451c1095df43ca33ef436 data/minecraft/tags/block/leaves.json
 e5091c60070e6e84afeb44f73b89f94d757aa1cc data/minecraft/tags/block/logs.json

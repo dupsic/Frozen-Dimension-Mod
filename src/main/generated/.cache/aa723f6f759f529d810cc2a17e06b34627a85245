@@ -1,10 +1,10 @@
 // 26.2	-999999999-01-01T00:00:00	Frozen dimension/Frozen Dimension Mod Data Provider
 de17022ee6cdde6323b670a9eedf518c0dc3e5a3 data/frozen-dimension/dimension/frozen.json
-592dedf5cdeab1c4a46252910cbaf77ecde7189b data/frozen-dimension/dimension_type/frozen_type.json
-865982e6502658b080697831f792b5b746516c23 data/frozen-dimension/worldgen/biome/frostpeak_mountains.json
-3f83f60a5a6b7998b5eb7bc8627494248ddb8f35 data/frozen-dimension/worldgen/biome/frozen_forest.json
-11bfe226f83dffd3ad7196946b7a800acce0a4f7 data/frozen-dimension/worldgen/biome/frozen_marsh.json
-6a741cb3e2589992aecda7d2bcc7015de1587821 data/frozen-dimension/worldgen/biome/frozen_wasteland.json
+b86cad6474572db930148f34fec384c0f865c595 data/frozen-dimension/dimension_type/frozen_type.json
+02b2e226c0aa7277d2c7e0aac70d81c1e382795d data/frozen-dimension/worldgen/biome/frostpeak_mountains.json
+5f3abd2be41686c95a2aa06b060703dd3f7bfdb4 data/frozen-dimension/worldgen/biome/frozen_forest.json
+f8df0c733c80eaf45b894e415a1f535cbc9f8fa9 data/frozen-dimension/worldgen/biome/frozen_marsh.json
+e0d951f170e92739b4bec25077946b186f0e285c data/frozen-dimension/worldgen/biome/frozen_wasteland.json
 dd644e962d6a66c2970d4b0bae62f460dbdddb1e data/frozen-dimension/worldgen/configured_feature/cryonite_ore.json
 e075e2147889de91f03dcac1982eae82c18c408d data/frozen-dimension/worldgen/configured_feature/frozen_berries.json
 5b43795e380ea37d393ba14e40c8bcca1ee3ff1a data/frozen-dimension/worldgen/configured_feature/frozen_coal.json

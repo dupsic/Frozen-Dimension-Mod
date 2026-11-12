@@ -55,7 +55,6 @@ public class ModCreativeModeTab {
                         output.accept(ModBlocks.MAGIC_FLOWER);
                         output.accept(ModBlocks.WASTELAND_FLOWER);
 
-                        output.accept(ModBlocks.FROZEN_PORTAL);
 
                         output.accept(ModItems.RAW_CRYONITE);
                         output.accept(ModItems.CRYONITE_INGOT);

@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TimelineTags;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.attribute.*;
 import net.minecraft.world.clock.WorldClocks;
 import net.minecraft.world.level.CardinalLighting;
@@ -49,7 +50,7 @@ public class ModDimensions {
                  384, // logicalHeight
                  blocks.getOrThrow(BlockTags.INFINIBURN_END), // infiniburn
                  0.0f, // ambientLight
-                 new DimensionType.MonsterSettings(ConstantInt.of(0), 0),
+                 new DimensionType.MonsterSettings(UniformInt.of(0, 7), 0),
                  DimensionType.Skybox.OVERWORLD,
                  CardinalLighting.Type.DEFAULT,
                  EnvironmentAttributeMap.builder()

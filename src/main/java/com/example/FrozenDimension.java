@@ -81,7 +81,7 @@ public class FrozenDimension implements ModInitializer {
 				return InteractionResult.PASS;
 			}
 
-			if (!player.getItemInHand(hand).is(Items.SNOWBALL)) {
+				if (!player.getItemInHand(hand).is(Items.FLINT_AND_STEEL)) {
 				return InteractionResult.PASS;
 			}
 
