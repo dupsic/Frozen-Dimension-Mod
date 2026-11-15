@@ -147,9 +147,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("cryonite_bow")
                         .save(output);
 
+                shaped(RecipeCategory.TOOLS, ModItems.CRYONITE_STAFF)
+                        .pattern("DCD")
+                        .pattern(" F ")
+                        .pattern(" S ")
+                        .define('C', ModItems.CRYONITE_INGOT)
+                        .define('S', Items.STICK)
+                        .define('F', ModBlocks.ICEBLOOM_FLOWER)
+                        .define('D', Items.DIAMOND)
+                        .unlockedBy(getHasName(ModItems.CRYONITE_INGOT), has(ModItems.CRYONITE_INGOT))
+                        .group("cryonite_staff")
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS, ModItems.EMBER_STAFF)
+                        .pattern("BCB")
+                        .pattern(" F ")
+                        .pattern(" S ")
+                        .define('C', ModItems.CRYONITE_INGOT)
+                        .define('S', Items.STICK)
+                        .define('F', ModBlocks.MAGIC_FLOWER)
+                        .define('B', Items.BLAZE_POWDER)
+                        .unlockedBy(getHasName(ModItems.CRYONITE_INGOT), has(ModItems.CRYONITE_INGOT))
+                        .group("ember_staff")
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS, ModItems.RIFT_STAFF)
+                        .pattern("ECE")
+                        .pattern(" F ")
+                        .pattern(" S ")
+                        .define('C', ModItems.CRYONITE_INGOT)
+                        .define('S', Items.STICK)
+                        .define('F', ModBlocks.WASTELAND_FLOWER)
+                        .define('E', Items.ENDER_PEARL)
+                        .unlockedBy(getHasName(ModItems.CRYONITE_INGOT), has(ModItems.CRYONITE_INGOT))
+                        .group("rift_staff")
+                        .save(output);
+
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.CRYONITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRYONITE_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.RAW_CRYONITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CRYONITE_BLOCK);
-
 
                 woodFromLogs(ModBlocks.ICEBLOOM_WOOD, ModBlocks.ICEBLOOM_LOG);
                 woodFromLogs(ModBlocks.STRIPPED_ICEBLOOM_WOOD, ModBlocks.STRIPPED_ICEBLOOM_LOG);

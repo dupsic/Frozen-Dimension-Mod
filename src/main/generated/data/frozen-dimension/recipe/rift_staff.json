@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "rift_staff",
+  "key": {
+    "C": "frozen-dimension:cryonite_ingot",
+    "E": "minecraft:ender_pearl",
+    "F": "frozen-dimension:wasteland_flower",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "ECE",
+    " F ",
+    " S "
+  ],
+  "result": {
+    "id": "frozen-dimension:rift_staff"
+  }
+}

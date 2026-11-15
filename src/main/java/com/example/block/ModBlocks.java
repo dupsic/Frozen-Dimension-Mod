@@ -164,7 +164,7 @@ public class ModBlocks {
                     properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
     public static final Block POTTED_WILLOW_SAPLING = registerBlockWithoutBlockItem("potted_willow_sapling",
-            properties -> new FlowerPotBlock(ICEBLOOM_SAPLING,
+            properties -> new FlowerPotBlock(WILLOW_SAPLING,
                     properties.instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
     public static final Block ICEBLOOM_FLOWER = registerBlock("icebloom_flower",

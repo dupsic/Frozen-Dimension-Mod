@@ -25,6 +25,7 @@ public class ModCreativeModeTab {
 
                         // ores
                         output.accept(ModBlocks.CRYONITE_ORE);
+                        output.accept(ModBlocks.RAW_CRYONITE_BLOCK);
                         output.accept(ModBlocks.FROZEN_COAL_ORE);
                         output.accept(ModBlocks.FROZEN_IRON_ORE);
                         output.accept(ModBlocks.FROZEN_COPPER_ORE);

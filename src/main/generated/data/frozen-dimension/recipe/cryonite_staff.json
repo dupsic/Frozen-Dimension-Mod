@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cryonite_staff",
+  "key": {
+    "C": "frozen-dimension:cryonite_ingot",
+    "D": "minecraft:diamond",
+    "F": "frozen-dimension:icebloom_flower",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "DCD",
+    " F ",
+    " S "
+  ],
+  "result": {
+    "id": "frozen-dimension:cryonite_staff"
+  }
+}

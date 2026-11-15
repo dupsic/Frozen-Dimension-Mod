@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "ember_staff",
+  "key": {
+    "B": "minecraft:blaze_powder",
+    "C": "frozen-dimension:cryonite_ingot",
+    "F": "frozen-dimension:magic_flower",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "BCB",
+    " F ",
+    " S "
+  ],
+  "result": {
+    "id": "frozen-dimension:ember_staff"
+  }
+}
